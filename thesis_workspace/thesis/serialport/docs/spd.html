@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org">
+<title>Manpage of spd</title>
+</head>
+<body>
+<h1>spd</h1>
+
+Section: User Commands (1)<br>
+Updated: April, 2005<br>
+<a href="#index">Index</a> <a href=
+"http://localhost/cgi-bin/man/man2html">Return to Main Contents</a>
+
+
+<hr>
+<a name="lbAB">&nbsp;</a> 
+
+<h2>NAME</h2>
+
+spd - a serial port server for C or Java clients. <a name=
+"lbAC">&nbsp;</a> 
+
+<h2>SYNOPSIS</h2>
+
+<b>spd</b> [<b>-dD</b>] <i>-p=port</i> <a name="lbAD">&nbsp;</a> 
+
+<h2>DESCRIPTION</h2>
+
+<b>spd</b> is a non-threaded server that is based round the poll()
+function, which handles all events on TCP connections and serial
+ports. It's sole configuration requirements are to set the port it
+listens on and to define the serial ports it is allowed to provide
+access to. The port is defined via the command line <i>-p</i>
+option and defaults to 16001. Serial ports are defined in the
+<i>spd.conf</i> configuration file. See below for format and
+location. Socket handling uses the <i>skt</i> module. Poll list
+manipulation is managed by the <i>fdlist</i> module. Both are part
+of the <i>libenviron.a</i> package. 
+
+<p>Every TCP/IP connection and every open serial port has a session
+control block. The purpose of the session is to associate entries
+in the poll list with their context information. The context for a
+TCP/IP connection is a reference to any serial port it may have
+opened. The context for a serial port session is contained in the
+control block referenced by its session. Each session is indexed by
+its file fd and records the type of file (TCP connection or PORT)
+it is related to. TCP sessions that have opened ports contain a
+reference to the PORT session. PORT sessions contain a reference to
+the associated serial port control block.</p>
+
+<p>TCP connections are added to the poll list as they are accepted
+and removed from the list as they are closed. A TCP session is
+created when the connection is accepted and destroyed when it is
+closed. A TCP connection that has opened a serial port remains open
+as long as the port is in use and its session references the PORT
+session as long as the port is open. A TCP session exists longer
+than a PORT session and may open and close more than one port
+during its existence.</p>
+
+<p>TCP sessions requesting a list of available ports, the server
+status or controlling the server, e.g. stopping it, never have an
+associated serial port.</p>
+
+<p>When a serial port is opened a PORT session is created, its fd
+is added to the poll list and its reference is placed in the
+controlling TCP session. When the port is closed it is removed from
+the poll list, its PORT session is unlinked from the controlling
+TCP session and the PORT is then destroyed. The session for an open
+port references the port's control block.</p>
+
+<p>There is a serial port control block associated with each serial
+port defined in the configuration file. Each control block exists
+for the whole life of the spd process. It holds the port context
+data and a pair of circular buffers to buffer the port's input and
+output data streams. Client commands that change the serial port
+settings record the changes in the control block, where they can be
+retrieved by an</p>
+
+<p><b>spc status</b></p>
+
+<p>command, and apply them directly to the port. All other commands
+merely change control block settings or move data to or from the
+buffers. All data transfers between the buffers and serial port
+take place asynchronously and independently of commands received
+from the client. As a result the <i>query</i> command is provided
+to allow the client to discover how full the buffers are. The
+<b>Java sleep() method</b> and <b>C sp_sleep() function</b>
+interfaces use this when waiting for transfers to complete. It is
+also available as the <b>Java query() method</b> or the <b>C
+sp_query() function</b> to client programs that implement their own
+flow control.</p>
+
+<p><a name="lbAE">&nbsp;</a></p>
+
+<h2>OPTIONS</h2>
+
+<dl>
+<dt>-?</dt>
+
+<dd>display summary help for <b>spd</b></dd>
+
+<dt>-d</dt>
+
+<dd>display debugging output. This option may appear more than
+once, each appearance causing debugging output to be more
+verbose.</dd>
+
+<dt>-D</dt>
+
+<dd>run as a daemon. This is normally only needed if <b>spd</b> is
+being started at system boot.</dd>
+
+<dt>-p=port</dt>
+
+<dd>listen on the port for connections. The default is to listen on
+port 16001.</dd>
+</dl>
+
+<a name="lbAF">&nbsp;</a> 
+
+<h2>FILES</h2>
+
+spd.conf The configuration file. It may be placed in <i>/etc</i> ,
+<i>/usr/local/etc</i> , or the current directory at the time
+<b>spd</b> is started. Possible locations are searched in the order
+shown above. 
+
+<p>Lines starting with a <b>#</b> are comments and ignored. Blank
+lines are ignored. The first two significant lines take the
+form:</p>
+
+<p>devices=nn<br>
+ maxmessage=llll</p>
+
+<p>where <i>nn</i> is the number of serial ports defined below and
+<i>llll</i> is the biggest message that <b>spd</b> expects to send
+or receive. This value sets the size of the input and output
+buffers associated with each open serial port. The buffers are set
+to be twice the size of the biggest message.</p>
+
+<p>Each serial port definition is a comma separated list of values.
+The last value is terminated by the newline that ends the
+definition. The fields are:</p>
+
+<pre>
+Field 1: The name used by spd to reference the port 
+Field 2: 'p', 'f' or 'l'. Map to a serial port, file or 
+         software loopback.
+Field 3: The absolute or relative name of the mapped device. 
+         A software loopback will open the file but leave it 
+         empty.
+Field 4: 'Y' if the port is accessable. 
+         'N' if it is not to be used.
+Field 5: The default baud rate.
+Field 6: The default number of data bits.
+Field 7: Default parity. 
+         'N' is none, 'E' is even, 'O' is odd.
+Field 8: The default number of stop bits.
+</pre>
+
+<p>A port known as <i>ttyS0</i> which is an active 9600b serial
+port using 8 data bits, no parity and one stop bit is:</p>
+
+<pre>
+ttyS0,p,/dev/ttyS0,Y,9600,8,N,1
+</pre>
+
+<p>The port shown below is sometimes used for testing and is known
+as <i>testport.</i> It is an active file mapped to
+<i>testport.txt.</i> The line parameters must be present and will
+be validated but are ignored:</p>
+
+<pre>
+testport,f,testport.txt,Y,9600,8,N,1
+</pre>
+
+<p>The port shown below is sometimes used for testing an
+interactive program and is known as <i>echo.</i> It is an active
+loopback that is mapped to the <i>echo.txt.</i> file. The line
+parameters must be present and will be validated but are
+ignored:</p>
+
+<pre>
+echo,l,echo.txt,Y,9600,8,N,1
+</pre>
+
+<p><a name="lbAG">&nbsp;</a></p>
+
+<h2>DEVELOPER NOTES</h2>
+
+<p>The following was true as at Kernel 2.4.</p>
+
+<p>When POLLIN events are enabled for an empty file a continuous
+series of POLLIN events are generated by the kernel, causing the
+event trap to retrieve a rapid series of null characters. Anything
+subsequently written to the file will not be retrieved. This
+affects the internal behavior of <b>spd</b> if a client accesses a
+port configured to access a file.</p>
+
+<p>If the port is configured to access a serial connection POLLIN
+behaves as expected and a POLLIN event is only generated when a
+character arrives in the UART's buffer. The spurious POLLIN events
+are never seen.</p>
+
+<p>As the spurious POLLIN events do not affect the external
+behavior of <b>spd</b> no attempt has been made to prevent them
+happening. The developer should note that they will appear in
+debugging output whenever a port that has been mapped to an empty
+file is opened or EOF is reached when a file is being read.</p>
+
+<p>The main consequence of all this that, as most of the test
+scripts are written to use file mapped ports, they write data to
+the port and only retrieve it after closing and re-opening the
+port. The other consequence is that the <b>Java echo() method</b>
+and the <b>C sp_echo function</b> will both give erroneous results
+if they are tested against a file mapped port. Test against a port
+defined as loopback or use <b>sptarget</b> to exercise them over a
+serial connection.<br>
+&nbsp; <a name="lbAH">&nbsp;</a></p>
+
+<h2>FUTURE DEVELOPMENTS</h2>
+
+<p>Port <b>spd</b> and <b>spc</b> to DOS/Windows. There are large
+differences between UNIX/Linux and DOS/Windows systems. The main
+problems are:</p>
+
+<ul>
+<li>The serial port fd is uniquely assigned by the operating
+system, but this is not the case in DOS/Windows, so a function
+layer must be introduced to handle this difference.</li>
+
+<li>Not all DOS/Windows compilers have a library that implements
+sockets or poll() [or even select() !].</li>
+
+<li>Serial port access is almost nonexistent under these operating
+systems, so the use of a library such as Willies Computing's
+COMM_DRV is probably essential.</li>
+</ul>
+
+<hr>
+<a name="index">&nbsp;</a> 
+
+<h2>Index</h2>
+
+<ul>
+<li><a href="#lbAB">NAME</a></li>
+
+<li><a href="#lbAC">SYNOPSIS</a></li>
+
+<li><a href="#lbAD">DESCRIPTION</a></li>
+
+<li><a href="#lbAE">OPTIONS</a></li>
+
+<li><a href="#lbAF">FILES</a></li>
+
+<li><a href="#lbAG">DEVELOPER NOTES</a></li>
+
+<li><a href="#lbAH">FUTURE DEVELOPMENTS</a></li>
+</ul>
+
+<hr>
+This document was created by <a href=
+"http://localhost/cgi-bin/man/man2html">man2html</a>, using the
+manual pages.<br>
+Time: 17:25:27 GMT, February 12, 2006
+</body>
+</html>
+

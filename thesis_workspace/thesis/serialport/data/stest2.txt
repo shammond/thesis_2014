@@ -1,0 +1,30 @@
+# stest 2 - More realistic command sets
+# =======
+#
+
+sp_create localhost 16001
+sp_open ttyS0 
+sp_getport
+sp_put W0;P0;           # OK
+sp_put stest_2          # OK
+sp_sleep 20 0
+sp_get 20               # should get "stest_2"
+sp_put Sfilex.txt;      # OK
+sp_sleep 200 0
+sp_get 200              # should get "can't open filex.txt"
+sp_put Sfile1.txt;      # OK
+sp_sleep 200 0
+sp_get 200              # should get file contents
+sp_put D009;DiscardedA011;Stored_textT	# OK
+sp_sleep 20 0
+sp_get 20               # should get "Stored_text"
+sp_put E7;An_echo      
+sp_sleep 200 0
+sp_get 200              # should get "An echo"
+sp_close TRUE           # OK
+
+sp_delete               # OK
+
+#
+# End of test: no errors expected
+#

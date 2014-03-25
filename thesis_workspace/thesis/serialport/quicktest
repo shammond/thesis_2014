@@ -1,0 +1,34 @@
+#
+# quicktest -opts file
+#
+
+if [ $# -lt 1 -o "$#" -gt 2 ]
+then
+	echo "quicktest [-opts] file"
+	echo The opts, if present, are spd options
+	exit 1
+fi
+
+if [ $# == 2 ]
+then
+	opts=$1
+	file=$2
+else
+	opts=''
+	file=$1
+fi
+
+if [ "$opts" == '' ]
+then
+	spd &
+else
+	spd $opts 2>spd.log &
+fi
+
+sleep 1
+rm -f port[1-9].txt
+testspd $file
+sleep 1
+echo "Stopping now"
+spc status stop
+

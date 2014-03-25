@@ -1,0 +1,42 @@
+Processing script data/stest2.txt
+  1: # stest 2 - More realistic command sets
+  2: # =======
+  3: #
+  4: 
+  5: sp_create localhost 16001
+     Created: localhost:16001
+  6: sp_open ttyS0
+  7: sp_put W0;P0;           # OK
+  8: sp_put stest_2          # OK
+  9: sp_sleep 20 0
+ 10: sp_get 20               # should get "stest_2"
+     Return string: [stest_2] (7 bytes)
+ 11: sp_put Sfilex.txt;      # OK
+ 12: sp_sleep 200 0
+ 13: sp_get 200              # should get "can't open filex.txt"
+     Return string: [sptarget: can't open filex.txt] (31 bytes)
+ 14: sp_put Sfile1.txt;      # OK
+ 15: sp_sleep 200 0
+ 16: sp_get 200              # should get file contents
+     Return string: [file1.txt
+=========
+A test file for transmission via the Sfile command.
+EOF
+] (80 bytes)
+ 17: sp_put D009;DiscardedA011;Stored_textT	# OK
+ 18: sp_sleep 20 0
+ 19: sp_get 20               # should get "Stored_text"
+     Return string: [Stored_text] (11 bytes)
+ 20: sp_put E7;An_echo
+ 21: sp_sleep 200 0
+ 22: sp_get 200              # should get "An echo"
+     Return string: [An_echo] (7 bytes)
+ 23: sp_close TRUE           # OK
+ 24: 
+ 25: sp_delete               # OK
+ 26: 
+ 27: #
+ 28: # End of test: no errors expected
+ 29: #
+Script ended: 0 errors
+

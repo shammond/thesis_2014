@@ -1,0 +1,39 @@
+# Test 2 - investigate failing sp_setport operations
+# ======
+#
+
+sp_create localhost 16001
+sp_open ttyS1                   # OK
+sp_getport
+sp_setport 4800 7 E 2           # OK
+sp_getport
+sp_setport 3600 7 E 2           # Error: invalid baud rate
+sp_getport
+sp_setport 4800 4 E 2           # Error: invalid data bits
+sp_getport
+sp_setport 4800 9 E 2           # Error: invalid data bits
+sp_getport
+sp_setport 4800 7 X 2           # Error: invalid parity
+sp_getport
+sp_setport 4800 7 E 0           # Error: invalid stop bits
+sp_getport
+sp_setport 4800 8 E 2           # Error: invalid databits and parity
+sp_getport
+sp_setport 19200 8 N 1          # OK
+sp_getport
+sp_delay 0                      # OK
+sp_delay 1                      # OK
+sp_setsep T , T                 # OK
+sp_delay 1001                   # Error: invalid delay
+sp_reset F F F                  # OK
+sp_reset t f f                  # OK
+sp_reset 0 1 0                  # OK
+sp_reset F F T                  # OK
+sp_reset T T T                  # OK
+sp_reset a A 10                 # OK
+sp_close                        # OK
+sp_delete
+
+#
+# End of test: 6 errors expected
+#

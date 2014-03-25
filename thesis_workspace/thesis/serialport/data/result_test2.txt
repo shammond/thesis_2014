@@ -1,0 +1,58 @@
+Processing script data/test2.txt
+  1: # Test 2 - investigate failing sp_setport operations
+  2: # ======
+  3: #
+  4: 
+  5: sp_create localhost 16001
+     Created: localhost:16001
+  6: sp_open ttyS1                   # OK
+  7: sp_getport
+     Port parameters: baud=9600 data=8 parity=N stop=1
+  8: sp_setport 4800 7 E 2           # OK
+  9: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 10: sp_setport 3600 7 E 2           # Error: invalid baud rate
+     Error:  -8,Invalid baud rate
+ 11: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 12: sp_setport 4800 4 E 2           # Error: invalid data bits
+     Error:  -8,Invalid data bit setting
+ 13: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 14: sp_setport 4800 9 E 2           # Error: invalid data bits
+     Error:  -8,Invalid data bit setting
+ 15: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 16: sp_setport 4800 7 X 2           # Error: invalid parity
+     Error:  -8,Invalid parity setting
+ 17: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 18: sp_setport 4800 7 E 0           # Error: invalid stop bits
+     Error:  -8,Invalid stop bit setting
+ 19: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 20: sp_setport 4800 8 E 2           # Error: invalid databits and parity
+     Error:  -8,Invalid combination of databits and parity
+ 21: sp_getport
+     Port parameters: baud=4800 data=7 parity=E stop=2
+ 22: sp_setport 19200 8 N 1          # OK
+ 23: sp_getport
+     Port parameters: baud=19200 data=8 parity=N stop=1
+ 24: sp_delay 0                      # OK
+ 25: sp_delay 1                      # OK
+ 26: sp_setsep T , T                 # OK
+ 27: sp_delay 1001                   # Error: invalid delay
+ 28: sp_reset F F F                  # OK
+ 29: sp_reset t f f                  # OK
+ 30: sp_reset 0 1 0                  # OK
+ 31: sp_reset F F T                  # OK
+ 32: sp_reset T T T                  # OK
+ 33: sp_reset a A 10                 # OK
+ 34: sp_close                        # OK
+ 35: sp_delete
+ 36: 
+ 37: #
+ 38: # End of test: 6 errors expected
+ 39: #
+Script ended: 6 errors
+

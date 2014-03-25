@@ -1,0 +1,31 @@
+# Test 3 - check behavior if no ports are opened
+# ======
+#
+
+sp_create localhost 16001       # OK
+sp_setport 4800 7 E 1           # Error: port not open
+sp_getport                      # Error: port not open (C)
+sp_reset T T T                  # Error: port not open
+sp_delay 10                     # Error: port not open
+sp_setsep t , t                 # Error: port not open
+sp_put Output_string            # Error: port not open
+sp_get                          # Error: port not open
+sp_echo A 0 15                  # Error: port not open
+sp_query                        # Error: port not open
+sp_sleep 0 0                    # Error: port not open
+sp_close                        # OK
+sp_delete                       # OK
+
+sp_create localhost 16001       # OK
+sp_open ttyS3                   # OK
+sp_delete                       # Error: connection still open
+
+#
+# Clean up after the test
+#
+sp_close
+sp_delete
+
+#
+# End of test: 11 errors expected (10 for Java)
+#

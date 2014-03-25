@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org">
+<title>SerialPort components</title>
+</head>
+<body>
+<h1>SerialPort components</h1>
+
+<h2>Package components</h2>
+
+<h3><a href="spd.html">spd</a></h3>
+
+<p><i>spd</i> is written in ANSI standard C and initially runs
+under Linux. It is a non-threaded server which handles all events
+on TCP connections and serial ports asynchronously. It's sole
+configuration requirements are to set the port it listens on and to
+define the serial ports it is allowed to provide access to. The
+port defaults to 16001.</p>
+
+<h3><a href="spc.html">spc</a></h3>
+
+<p>This is a simple command line utility that can display
+<i>spd</i>'s current status and can be used to shut it down.</p>
+
+<h3>SerialPort applications interfaces</h3>
+
+<p>Two <b>SerialPort</b> interfaces have been implemented, one for
+ANSI C and one for Java:</p>
+
+<ul>
+<li>The <a href="java/index.html">SerialPort</a> package implements
+the Java interface.</li>
+
+<li>The libsp.a C library and <a href=
+"c/serialport.html">serialport.h</a> header file implement the C
+interface.</li>
+</ul>
+
+<p>The interfaces are functionally equivalent though, because of
+language differences, there is not an exact 1:1 correspondence
+between C function calls and Java methods. However, it is always
+possible to combine Java methods to get the exact equivalent of the
+corresponding C function. Comparing <i>TestSPD.java</i> and
+<i>testspd.c</i> sources shows exactly how to achieve this. Both
+test harnesses run the same set of test scripts.</p>
+
+<h2>Test harnesses and debugging aids</h2>
+
+<h3>testspd and TestSPD</h3>
+
+<p>These are script driven test harnesses for the C and Java
+interfaces respectively. They can exercise all interface functions
+and corresponding server capabilities. A set of test scripts are
+provided that can be run by either test harness. All operate with
+the example <i>spd.conf</i> file and cause the server to send data
+to and from disk files and a single serial line, which should have
+sptarget attached to the remote end.</p>
+
+<p>Both implement the <kbd>login</kbd> command. It is built on top
+of the <b>SerialPort</b> interface and designed to login to a host
+running <b>OS-9</b>. If you need to run it against another system
+you'll need to change the prompts that it recognises. It was
+written this way because an <b>OS-9</b> system was the only
+available target machine.</p>
+
+<h3>spd_regress and Java_regress</h3>
+
+<p>The C regression tests are run by the <i>spd_regress</i> script
+and the Java regression tests are run by the <i>Java_regress</i>
+script. They start a copy of <i>spd</i>, run the tests and then use
+<i>spc</i> to stop the server. As each test is run the test harness
+output is compared with a set of expected results by using diff and
+the differences are displayed. The expected results are kept in the
+<i>result*.txt</i> files.</p>
+
+<p>All scripts and results files and in the <i>data</i>
+subdirectory.</p>
+
+<p>Test scripts that do not require a serial connection (they use
+files instead) are in the <i>test[0-9].txt</i> files. These are run
+by default if <i>spd_regress</i> and <i>Java_regress</i> have no
+parameters supplied other than options.</p>
+
+<p>Scripts that exercise a real serial connection are in the
+<i>stest[0-9].txt</i> files. These are run if <i>spd_regress</i>
+and <i>Java_regress</i> have <i>stest</i> supplied as the only
+non-option parameter. These scripts are designed to be run with the
+<i>sptarget</i> utility running at the remote end of the line. The
+<i>stest0.txt</i> script is written on the assumption that the
+following logins exist on the machine at the far end of the
+line:</p>
+
+<table summary="logins">
+<tr>
+<td><b>Login name</b></td>
+<td><b>Password</b></td>
+<td><b>Description</b></td>
+</tr>
+
+<tr>
+<td>spt</td>
+<td>blank</td>
+<td>starts <i>sptarget</i> instead of a shell. It logs out when
+<i>sptarget</i> receives <b>Q</b>.</td>
+</tr>
+
+<tr>
+<td>sptarget</td>
+<td></td>
+<td>A nonexistent login name.</td>
+</tr>
+
+<tr>
+<td>cc</td>
+<td>kiwi</td>
+<td>A login to a shell that understands <i>dir</i> as the command
+to list a directory and <i>x</i> as a logout alias.</td>
+</tr>
+</table>
+
+<p>These scripts use the builtin <i>login</i> command in
+<i>testspd</i> and <i>TestSPD</i> to log on to the users. See the
+description of these programs for details.</p>
+
+<h3><a href="sptarget.html">sptarget</a></h3>
+
+<p>This is a test utility that provides known a remote application
+to allow the SerialPort functions and server to be exercised over
+an RS-232 line. It was initially developed to run under the <a
+href="http://www.microware.com">Microware OS/9</a> operating
+system, but can be compiled and run within a Linux environment.</p>
+
+<p>The <i>stest*.txt</i> files are scripts that are designed to be
+run against this program using a serial connection. <i>sptarget</i>
+may be run on a separate host or on the same host via a loopback
+cable. The <i>spttest*.txt</i> scripts are intended solely to test
+<i>sptarget</i>. They are designed to be input directly to
+<i>sptarget</i>'s standard input. <i>file1.txt</i> is referenced by
+them. It contains data to be returned by <i>sptarget</i>.</p>
+
+<h3>Buffer overflow testing</h3>
+
+<p>The <i>btest1.txt</i> script is designed allow the test
+harnesses to check buffer overflow conditions. It will only work
+correctly if the circular buffers are set to 64 bytes capacity by
+setting <kbd><b>maxmessage</b></kbd> to 32 in <i>spd.conf</i>.</p>
+
+<h3>quicktest</h3>
+
+<p>This is a simple shell script to quickly run a single script
+against <i>spd</i> via the <i>testspd</i> test harness. It starts a
+copy of <i>spd</i>, runs the test and then uses <i>spc</i> to stop
+the server.</p>
+
+<h3>multitest</h3>
+
+<p>This is a simple shell script to run multiple copies of
+<i>testspd</i> against <i>spd</i>. One copy of <i>testspd</i> is
+started for each command line argument and the results for each
+copy of <i>testspd</i> are written to separate files named
+<i>multi_<b>BASE</b></i> where <i>BASE</i> is the basename of the
+input script file. Under Kernel 2.4 it failed entirely to track the
+test progress or stop the server after the last client had stopped.
+If you have this problem stop the script with <b>^C</b>, monitor
+progress by issuing <kbd><b>ps; spc status</b></kbd> commands until
+only the server is running and then stop it with an <kbd><b>spc
+stop</b></kbd> command.</p>
+
+<h3><a name="JTerm">JTerm</a></h3>
+
+<p>This is a pure Java terminal emulator using <b>SerialPort</b>
+Java extensions to access remote systems via a serial connection.
+Its components are supplied in the <i>jterm</i> subdirectory as
+part of the source archive. It is built with the rest of the
+package. It is run with the command <kbd><b>java JTerm</b></kbd>.
+All other information is available through its GUI and the
+automatically generated documentation provided by <kbd><b>make
+docs</b></kbd>.</p>
+
+<p>It is currently limited to "glass teletype" operation: it does
+not currently understand escape sequences or handle the TAB key,
+but it should log in to most shells and communicate with the
+<i>sptarget</i> utility.</p>
+
+<h2>Documentation</h2>
+
+<p>Manpages for <b>spd</b>, <b>spc</b> and <b>sptarget</b> are
+installed when the programs and libraries are installed.</p>
+
+<p>Web-based documentation is generated into the docs subdirectory
+by running</p>
+
+<p><kbd><b>make docs</b></kbd></p>
+
+<p>You can permanently install the document set by copying
+everything in the <i>docs</i> directory and its subdirectories to
+any location that's convenient for access by your web browsers or
+servers. Access this document set via the <i>index.html</i> page in
+the <i>docs</i> subdirectory.</p>
+</body>
+</html>
+

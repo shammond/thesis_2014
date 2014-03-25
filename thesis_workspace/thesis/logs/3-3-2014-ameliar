@@ -1,0 +1,70 @@
+Mar 03, 2014 10:36:16 PM thesis.TextDisplay setUp
+INFO: Program start: 1393904176906
+Mar 03, 2014 10:37:31 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 75037
+Mar 03, 2014 10:37:56 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 100045
+Mar 03, 2014 10:39:11 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 175067
+Mar 03, 2014 10:39:36 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 200075
+Mar 03, 2014 10:40:52 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 275096
+Mar 03, 2014 10:41:17 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 300104
+Mar 03, 2014 10:42:32 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 375156
+Mar 03, 2014 10:42:57 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 400164
+Mar 03, 2014 10:44:12 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 475170
+Mar 03, 2014 10:44:37 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 500178
+Mar 03, 2014 10:45:52 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 575246
+Mar 03, 2014 10:46:17 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 600254
+Mar 03, 2014 10:47:32 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 675280
+Mar 03, 2014 10:47:57 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 700290
+Mar 03, 2014 10:49:12 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 775301
+Mar 03, 2014 10:49:37 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 800311
+Mar 03, 2014 10:50:52 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 875322
+Mar 03, 2014 10:51:17 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 900331
+Mar 03, 2014 10:52:32 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 975340
+Mar 03, 2014 10:52:57 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 1000348
+Mar 03, 2014 10:53:40 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 1043,13.460145350875143
+Mar 03, 2014 10:53:40 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small regimenthealth.txt 1043141
+Mar 03, 2014 10:53:58 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 1061,31.643543223052294
+Mar 03, 2014 10:53:58 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small regimenthealth.txt 1061881
+Mar 03, 2014 10:54:12 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 1075360
+Mar 03, 2014 10:54:37 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 1100369
+Mar 03, 2014 10:54:57 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 1120,25.58899227875668
+Mar 03, 2014 10:54:57 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small burritos.txt 1120573
+Mar 03, 2014 10:55:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 1149,21.446246906791313
+Mar 03, 2014 10:55:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small burritos.txt 1149684
+Mar 03, 2014 10:55:47 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 1170,30.66105424280111
+Mar 03, 2014 10:55:47 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small burritos.txt 1170605
+Mar 03, 2014 10:55:52 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 1175427
+Mar 03, 2014 10:56:03 PM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 1187019

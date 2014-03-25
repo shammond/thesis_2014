@@ -1,0 +1,44 @@
+Processing script data/stest3.txt
+  1: # stest 3 - Exercise the sp_echo function.
+  2: # =======
+  3: #
+  4: 
+  5: sp_create localhost 16001
+     Created: localhost:16001
+  6: sp_open ttyS0
+  7: sp_echo W0;P0; 20 0
+     Return string: [] (0 bytes)
+  8: # should have got nothing
+  9: 
+ 10: sp_echo stest_3 20 0
+     Return string: [stest_3] (7 bytes)
+ 11: # should have got "stest_3"
+ 12: 
+ 13: sp_echo Sfilex.txt; 200 0
+     Return string: [sptarget: can't open filex.txt] (31 bytes)
+ 14: # should have got "can't open filex.txt"
+ 15: 
+ 16: sp_echo Sfile1.txt; 200 0
+     Return string: [file1.txt
+=========
+A test file for transmission via the Sfile command.
+EOF
+] (80 bytes)
+ 17: # should have got file1.txt contents
+ 18: 
+ 19: sp_echo D009;DiscardedA011;Stored_textT	20 0
+     Return string: [Stored_text] (11 bytes)
+ 20: # should have got "Stored_text"
+ 21: 
+ 22: sp_echo E7;An_echo 200 0
+     Return string: [An_echo] (7 bytes)
+ 23: # should have got "An echo"
+ 24: 
+ 25: sp_close TRUE           # OK
+ 26: sp_delete               # OK
+ 27: 
+ 28: #
+ 29: # End of test: no errors expected
+ 30: #
+Script ended: 0 errors
+

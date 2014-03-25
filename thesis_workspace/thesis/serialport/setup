@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Prepare the directory for compilation.
+#
+# Install SerialPort as a symlink in SerialPort and jterm. 
+# This is to keep the initial compilation happy if the jar file is not
+# yet installed.
+#
+# Add the c, java and jterm subdirectories in docs
+# 
+
+function add_link()
+{
+	if [ ! -h $1/$2 ]
+	then
+		echo "Adding symlink $2 to $1"
+		cd $1
+		ln -s ../$2 $2
+		cd ..
+	fi
+}
+
+function add_dir()
+{
+	if [ ! -d $1/$2 ]
+	then
+		echo "Adding directory $2 to $1"
+		mkdir $1/$2
+	fi
+}
+
+add_link SerialPort SerialPort
+add_link jterm SerialPort
+add_dir docs c
+add_dir docs jterm
+add_dir docs java
+
+add_dir docs/java SerialPort
+

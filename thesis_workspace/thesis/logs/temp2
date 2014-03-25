@@ -1,0 +1,18 @@
+Mar 01, 2014 12:25:46 AM thesis.TextDisplay setUp
+INFO: Program start: 1393651546933
+Mar 01, 2014 12:26:08 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 21,4.994074674057807E-7
+Mar 01, 2014 12:26:08 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal lupita.txt 21089
+Mar 01, 2014 12:26:28 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 41,32.9697087756891
+Mar 01, 2014 12:26:28 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal lupita.txt 41628
+Mar 01, 2014 12:26:57 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 70,28.62400327131466
+Mar 01, 2014 12:26:57 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal lupita.txt 70977
+Mar 01, 2014 12:27:01 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 75018
+Mar 01, 2014 12:27:04 AM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 78014

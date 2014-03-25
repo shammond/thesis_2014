@@ -1,0 +1,23 @@
+Processing script data/stest9.txt
+  1: # stest 9 - Use sp_echo to stop the remote application and logout.
+  2: # =======
+  3: #
+  4: 
+  5: sp_create localhost 16001
+     Created: localhost:16001
+  6: sp_open ttyS0
+  7: 
+  8: sp_echo Q 200 0
+     Return string: [Read 244  Wrote 459
+Logout after 27 seconds.  Total time 6:02:30.
+] (66 bytes)
+  9: # Remote logout completes
+ 10: 
+ 11: sp_close TRUE           # OK
+ 12: sp_delete               # OK
+ 13: 
+ 14: #
+ 15: # End of test: no errors expected
+ 16: #
+Script ended: 0 errors
+

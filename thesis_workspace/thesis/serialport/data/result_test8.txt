@@ -1,0 +1,28 @@
+Processing script data/test8.txt
+  1: # Test 8 - exercises all possibilities for sp_setsep parameters
+  2: # ======   can only be checked by looking at a debugging trace
+  3: #
+  4: 
+  5: sp_create localhost 16001
+     Created: localhost:16001
+  6: sp_open ttyS1           # OK
+  7: 
+  8: sp_setsep T  \n  T
+  9: sp_setsep t  \r  t
+ 10: sp_setsep 1  \l  1
+ 11: sp_setsep F  \t  F
+ 12: sp_setsep f  \0  f
+ 13: sp_setsep 0  \1  0
+ 14: sp_setsep 1  1   1
+ 15: sp_setsep \0 \0  \0
+ 16: sp_setsep x  \\  \x
+ 17: sp_setsep x  x   x
+ 18: 
+ 19: sp_close                # OK
+ 20: sp_delete
+ 21: 
+ 22: #
+ 23: # End of test: no errors expected
+ 24: #
+Script ended: 0 errors
+

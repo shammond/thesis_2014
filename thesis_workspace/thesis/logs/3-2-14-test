@@ -1,0 +1,108 @@
+Mar 02, 2014 11:13:23 AM thesis.TextDisplay setUp
+INFO: Program start: 1393776803172
+Mar 02, 2014 11:13:50 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 27,25.757743976906852
+Mar 02, 2014 11:13:50 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal lupita.txt 27021
+Mar 02, 2014 11:14:14 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 51,27.996030105036805
+Mar 02, 2014 11:14:14 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal lupita.txt 51219
+Mar 02, 2014 11:14:38 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 74996
+Mar 02, 2014 11:15:03 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 99989
+Mar 02, 2014 11:15:28 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 124,27.280408803766147
+Mar 02, 2014 11:15:28 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small googlass.txt 124842
+Mar 02, 2014 11:15:52 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 149,26.055237102657635
+Mar 02, 2014 11:15:52 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small googlass.txt 149789
+Mar 02, 2014 11:16:18 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 174954
+Mar 02, 2014 11:16:43 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 199947
+Mar 02, 2014 11:17:18 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 235,26.76453350450727
+Mar 02, 2014 11:17:18 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 235779
+Mar 02, 2014 11:17:39 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 256,29.3161190117944
+Mar 02, 2014 11:17:39 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 256382
+Mar 02, 2014 11:17:58 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 274928
+Mar 02, 2014 11:18:23 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 299930
+Mar 02, 2014 11:19:05 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 342,22.229502059153877
+Mar 02, 2014 11:19:05 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small chancesare.txt 342667
+Mar 02, 2014 11:19:24 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 361,28.657779696691673
+Mar 02, 2014 11:19:24 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small chancesare.txt 361196
+Mar 02, 2014 11:19:38 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 375001
+Mar 02, 2014 11:20:03 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 400003
+Mar 02, 2014 11:20:31 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 428,20.68797945086605
+Mar 02, 2014 11:20:31 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small commonsense.txt 428812
+Mar 02, 2014 11:21:18 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 475291
+Mar 02, 2014 11:21:43 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 500294
+Mar 02, 2014 11:22:43 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 560,26.226437185341293
+Mar 02, 2014 11:22:43 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal astleys.txt 560081
+Mar 02, 2014 11:22:58 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 575291
+Mar 02, 2014 11:23:23 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 600297
+Mar 02, 2014 11:23:54 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 631,35.68545131600194
+Mar 02, 2014 11:23:54 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal onion.txt 631262
+Mar 02, 2014 11:24:22 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 659,22.778561354019747
+Mar 02, 2014 11:24:22 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal onion.txt 659622
+Mar 02, 2014 11:24:38 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 675332
+Mar 02, 2014 11:25:03 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 700339
+Mar 02, 2014 11:25:26 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 722,28.336501480924806
+Mar 02, 2014 11:25:26 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small orphans.txt 722960
+Mar 02, 2014 11:25:48 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 745,24.05452358679674
+Mar 02, 2014 11:25:48 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small orphans.txt 745409
+Mar 02, 2014 11:26:18 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 775408
+Mar 02, 2014 11:26:43 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 800415
+Mar 02, 2014 11:27:23 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 840,23.55929670767545
+Mar 02, 2014 11:27:23 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal persistent.txt 840569
+Mar 02, 2014 11:27:58 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 875420
+Mar 02, 2014 11:28:23 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 900427
+Mar 02, 2014 11:28:44 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 921,26.084436286349145
+Mar 02, 2014 11:28:44 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal football1.txt 921129
+Mar 02, 2014 11:29:02 AM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 939,30.035335689045937
+Mar 02, 2014 11:29:02 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal football1.txt 939241
+Mar 02, 2014 11:29:17 AM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 954046

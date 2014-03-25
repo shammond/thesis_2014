@@ -1,0 +1,32 @@
+Mar 05, 2014 1:16:14 PM thesis.TextDisplay setUp
+INFO: Program start: 1394043374815
+Mar 05, 2014 1:16:17 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 2,269.11196911196913
+Mar 05, 2014 1:16:17 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal lupita.txt 2622
+Mar 05, 2014 1:17:29 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 75037
+Mar 05, 2014 1:17:54 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 100034
+Mar 05, 2014 1:19:09 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 175055
+Mar 05, 2014 1:19:34 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 200060
+Mar 05, 2014 1:20:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 251,18.969925252249265
+Mar 05, 2014 1:20:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 251299
+Mar 05, 2014 1:20:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 252,788.5117493472585
+Mar 05, 2014 1:20:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 252065
+Mar 05, 2014 1:20:49 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 275102
+Mar 05, 2014 1:21:14 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 300107
+Mar 05, 2014 1:22:30 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 375351
+Mar 05, 2014 1:22:55 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 400355
+Mar 05, 2014 1:23:19 PM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 424517

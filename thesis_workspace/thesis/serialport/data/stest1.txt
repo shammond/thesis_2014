@@ -1,0 +1,41 @@
+# stest 1 - check communication with sptarget
+# =======
+#
+
+sp_create localhost 16001
+sp_open ttyS0 
+sp_getport
+sp_setsep T . T         # OK
+sp_put stest_1          # OK
+sp_sleep 20 0
+sp_get 20               # should get "stest_1"
+sp_setsep F . F         # OK
+sp_put W0;              # OK
+sp_put P0;              # OK
+sp_sleep 10 0
+sp_get 10               # should get nothing
+sp_put Sfilex.txt;      # OK
+sp_sleep 200 0
+sp_get 200              # should get "can't open filex.txt"
+sp_put Sfile1.txt;      # OK
+sp_sleep 200 0
+sp_get 200              # should get file contents
+sp_put D009;Discarded   # OK
+sp_sleep 10 0
+sp_get 10               # should get nothing
+sp_put A011;Stored_text # OK
+sp_sleep 10 0
+sp_get 10               # should get nothing
+sp_put T                # OK
+sp_sleep 50 0
+sp_get 50               # should get "Stored_text"
+sp_put E7;An_echo       # OK
+sp_sleep 30 100
+sp_get 30               # should get "An_echo"
+sp_close                # OK
+sp_close TRUE
+sp_delete               # OK
+
+#
+# End of test: 0 errors expected
+#

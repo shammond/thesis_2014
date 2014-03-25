@@ -1,0 +1,43 @@
+#
+# stest0.txt - login prior to running tests with configured lines
+# ==========
+#
+sp_create localhost 16001
+sp_open ttyS0
+sp_getport
+login spt                  # login as 'spt': no password needed
+sp_echo Q 200 200          # send sptarget a Quit command
+sp_close TRUE              # end the session
+pause 1000
+
+sp_open ttyS0
+sp_getport
+login sptarget             # login as an unknown user: should fail
+sp_close TRUE              # end the session
+pause 1000
+
+sp_open ttyS0
+sp_getport
+login cc kiwi              # login as cc, a normal user needing a password
+sp_setsep T \r T           # prepare to deal with the sh shell 
+sp_put dir                 # send the "dir" command and read the echo
+sp_setsep F \r F           # disable field separators
+sp_sleep 1600 100          # wait for command to execute
+sp_get 1600                # read the multi-line response
+sp_setsep T \r T           # field separators on again 
+sp_put x                   # send logout command and read its echo
+sp_setsep f \r f           # disable separators
+sp_sleep 1600 100          # wait for command to execute
+sp_get 1600                # read the multiline response
+sp_close                   # end the session
+pause 1000
+
+sp_open ttyS0
+sp_getport
+login spt                  # login as 'spt': no password needed
+sp_close                   # leave 'spt' looged in for further tests
+sp_delete
+
+#
+# End of script - 1 error expected
+#

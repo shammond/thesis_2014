@@ -1,0 +1,86 @@
+#!/bin/sh
+#
+# regression test for spd and Java interface class
+#
+
+#
+# Trap help requests
+#
+if [ $# -gt 0 -a "$1" == '-?' ]
+then
+	script_help Java_regress
+	exit 1
+fi
+
+#
+# Set up debugging conditions. 
+# The same debug level is used for client and server. 
+# The server trace is sent to a separate file, spd.log.
+#
+dbg=""
+strace=""
+stfile="spd_java.log"
+for arg
+do
+	r=$(expr $arg : '-d*' '>' 1)
+	if [ "$r" == 1 ]
+	then
+		dbg=${dbg}" "$arg
+		shift
+	fi
+done
+
+if [ "$dbg" != "" ]
+then
+	strace="&>"$stfile
+fi
+
+#
+# Set up the test script stub
+#
+stub=$1
+if [ -z "$stub" ]
+then
+	stub="test"
+fi
+
+#
+# Start the server
+#
+if [ -f $stfile ]
+then
+	rm $stfile
+fi
+
+eval spd $dbg $strace &
+
+#
+# Run the tests
+#
+for f in data/${stub}*.txt
+do
+	echo "Running $f"
+	f=`basename $f`
+	rm -f port[1-9].txt
+	java TestSPD data/$f | diff - data/resultJ_$f
+	rm -f port[1-9].txt
+done
+
+#
+# Stop the server after displaying its status
+#
+spc status stop
+
+#help
+#Syntax:   Java_regress [options] [file_stub]
+#Function: Regression test the Java interface class and the spd server
+#          Server tracing, if requested is sent to spd_java.log
+#          'file_stub' is the common prefix of the test scripts to be run.
+#          The file names must end in '.txt' and a matching set of
+#          result files whose names start with 'resultJ_' must exist.
+#          If 'file_stub' is omitted it will default to 'test'.
+#          Both test scripts and result files must be in the 'data' directory.
+#Options:  -d      Sets server debugging levels
+#
+#end
+

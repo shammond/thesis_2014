@@ -1,0 +1,72 @@
+Feb 18, 2014 1:37:52 PM thesis.TextDisplay setUp
+INFO: Program start: 1392748672957
+Feb 18, 2014 1:38:12 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 4.796270881981381E-7
+Feb 18, 2014 1:38:12 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal norway1.txt 19654
+Feb 18, 2014 1:38:34 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 24.744661095636026
+Feb 18, 2014 1:38:34 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal norway1.txt 41200
+Feb 18, 2014 1:38:56 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 23.70444515219073
+Feb 18, 2014 1:38:56 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal norway1.txt 63182
+Feb 18, 2014 1:39:12 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 33.292231812577064
+Feb 18, 2014 1:39:12 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal norway1.txt 79405
+Feb 18, 2014 1:39:22 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 90024
+Feb 18, 2014 1:39:32 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 100027
+Feb 18, 2014 1:39:57 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 28.047821950109626
+Feb 18, 2014 1:39:57 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small googlass.txt 124203
+Feb 18, 2014 1:40:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 21.850942952230476
+Feb 18, 2014 1:40:26 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small googlass.txt 153953
+Feb 18, 2014 1:41:00 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 25.39850908983765
+Feb 18, 2014 1:41:00 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small googlass.txt 187898
+Feb 18, 2014 1:41:00 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 9341.463414634147
+Feb 18, 2014 1:41:00 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple small googlass.txt 187984
+Feb 18, 2014 1:41:02 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 190031
+Feb 18, 2014 1:41:12 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 200034
+Feb 18, 2014 1:41:46 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 28.45444025754384
+Feb 18, 2014 1:41:46 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 233741
+Feb 18, 2014 1:42:11 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 24.336194044884966
+Feb 18, 2014 1:42:11 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 258562
+Feb 18, 2014 1:42:33 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 26.217745273906445
+Feb 18, 2014 1:42:33 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex normal mortgage.txt 280306
+Feb 18, 2014 1:42:42 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 290037
+Feb 18, 2014 1:42:52 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 300039
+Feb 18, 2014 1:43:31 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 26.355034454386505
+Feb 18, 2014 1:43:31 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small cloud.txt 338934
+Feb 18, 2014 1:44:06 PM thesis.TextDisplay$1 mouseClicked
+INFO: Chars per second: 27.398431931575196
+Feb 18, 2014 1:44:06 PM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: complex small cloud.txt 374012
+Feb 18, 2014 1:44:22 PM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 390042
+Feb 18, 2014 1:44:33 PM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 400045
+Feb 18, 2014 1:45:40 PM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 468020

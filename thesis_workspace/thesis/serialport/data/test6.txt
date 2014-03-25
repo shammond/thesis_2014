@@ -1,0 +1,36 @@
+# Test 6 - check put/get behavior with modified port paramerters
+# ======   set by the client.
+#
+sp_create localhost 16001       # OK
+sp_open ttyS1                   # OK
+sp_getport
+sp_setport 9600 7 N 1           # OK
+sp_getport
+sp_delay 3                      # OK
+sp_put a_line
+sp_put another_line
+sp_put a_very_much_longer_set_of_characters_to_build_things_out_to_here
+sp_put x
+sp_put EOF
+sp_sleep 0 0
+sp_close
+
+pause 1000                      # Wait for connections to reset
+
+sp_open ttyS1                   # OK
+sp_getport
+sp_setport 9600 7 N 1           # OK
+sp_getport
+sp_delay 3                      # OK
+sp_sleep 80 0                   # Let the buffer fill
+sp_get 80                       # Read 80 characters
+sp_sleep 6 0
+sp_get 6                        # Read 6 characters
+sp_sleep 1 0                
+sp_get 1                        # Should get nothing
+sp_close
+sp_delete
+
+#
+# End of test: 0 errors expected
+#

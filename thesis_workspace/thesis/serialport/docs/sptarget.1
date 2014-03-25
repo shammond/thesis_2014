@@ -1,0 +1,139 @@
+.\" Martin Gregorie
+.\" martin@gregorie.demon.co.uk
+.\" 10 Sadlers Mead
+.\" Harlow
+.\" Essex CM18 6HG, 
+.\" UK
+.\"
+.TH sptarget 1 "April, 2005"
+.LO 1
+.SH NAME
+sptarget \- simulates a remote application for spd testing
+.SH SYNOPSIS
+.B sptarget
+.RB [ \-d ] 
+.I -l
+.SH OPTIONS
+.in +5
+.B \-?
+.in +10
+display summary help for
+.B spc
+.in -10
+.B \-d
+.in +10
+display debugging output. This option may appear more than once,
+each appearance causing debugging output to be more verbose.
+.in -10
+.B \-l
+.in +10
+Log all input and output in 
+.I sptarget.log
+.in -10
+.in -5
+.SH DESCRIPTION
+.B sptarget
+is a test target for the serial port server. Its function
+is to interpret its input stream, which is read on stdin, and output
+responses on stdout.
+.sp
+Commands are the single upper case characters listed below. Some commands
+are followed by a variable length parameter which is terminated by a
+semicolon. Parameters and the terminating semicolon are not echoed.
+Anything which isn\'t a command is immediately sent back on stdout.
+.SH COMMANDS
+.in +5
+.B Q       
+.in +5 No output produced. 
+.B sptarget 
+exits immediately.
+.in -5
+.sp	
+.B Wnnnn;  
+.in +5
+Wait for up to 
+.I nnnn 
+milliseconds before executing the following commands.
+Cancelled by a following 
+.I W0; 
+command
+.in -5
+.sp
+.B Pnnn;   
+.in +5
+Pause 
+.I nnn 
+milliseconds before sending each byte. Cancelled by a following 
+.I P0; 
+command.
+.in -5
+.sp
+.B Sfile;  
+.in +5
+Send the contents of 
+.I file.
+.in -5
+.sp
+.B Dnnn;   
+.in +5 
+Discard the following 
+.I nnn 
+bytes.
+.in -5
+.sp
+.B Annn;   
+.in +5
+Accept and store the following 
+.I nnn 
+bytes.
+.in -5
+.sp
+.B T       
+.in +5 
+Transmit the stored bytes.
+.in -5
+.sp
+.B Ennn;   
+.in +5
+Echo the following 
+.I nnn 
+bytes by storing them all before transmitting them.
+.sp
+.in +5
+E10;bytestring
+.in -5
+.sp
+is equivalent to
+.in +5
+.sp	
+A10;bytestringT
+.in -5
+.sp
+The response is sent immediately regardless of the current Wait setting.
+.in -5
+.sp
+.B Lbbbb,d,p,s;
+.in +5
+sets new operating conditions for the serial line.
+.I bbbb 
+is the required baud rate, 
+.I d 
+is the number of data bits (5-8),
+.I p 
+is parity (n,e,o in upper or lower case) and 
+.I s 
+is the number of stop
+bits (1,2). No response is sent. If the parameters are incorrect
+.B sptarget
+will abort with an error message.
+.in -5
+.sp
+.B M
+.in +5
+Send a string containing the serial line parameters that were set by
+a preceeding 
+.I L 
+command. If there was no preceeding 
+.I L 
+command the response is "Unset".
+

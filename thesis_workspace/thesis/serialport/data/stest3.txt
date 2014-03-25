@@ -1,0 +1,31 @@
+# stest 3 - Exercise the sp_echo function.
+# =======
+#
+
+sp_create localhost 16001
+sp_open ttyS0 
+sp_getport
+sp_echo W0;P0; 20 0
+# should have got nothing
+
+sp_echo stest_3 20 0
+# should have got "stest_3"
+
+sp_echo Sfilex.txt; 200 0
+# should have got "can't open filex.txt"
+
+sp_echo Sfile1.txt; 200 0
+# should have got file1.txt contents
+
+sp_echo D009;DiscardedA011;Stored_textT	20 0
+# should have got "Stored_text"
+
+sp_echo E7;An_echo 200 0
+# should have got "An echo"
+
+sp_close TRUE           # OK
+sp_delete               # OK
+
+#
+# End of test: no errors expected
+#

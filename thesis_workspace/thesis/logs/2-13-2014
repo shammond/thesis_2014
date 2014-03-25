@@ -1,0 +1,62 @@
+Feb 13, 2014 2:52:10 AM thesis.TextDisplay setUp
+INFO: Program start
+Feb 13, 2014 2:52:12 AM thesis.TextDisplay$1 mouseClicked
+INFO: Next slide: simple normal football1.txt 1570909977
+Feb 13, 2014 2:52:15 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 5017047356
+Feb 13, 2014 2:52:18 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 8020777831
+Feb 13, 2014 2:52:23 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 13039894031
+Feb 13, 2014 2:52:26 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 16045108353
+Feb 13, 2014 2:52:31 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 21055357227
+Feb 13, 2014 2:52:34 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 24059479024
+Feb 13, 2014 2:52:39 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 29069654732
+Feb 13, 2014 2:52:42 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 32074714114
+Feb 13, 2014 2:52:47 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 37083052394
+Feb 13, 2014 2:52:50 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 40088139255
+Feb 13, 2014 2:52:55 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 45107370005
+Feb 13, 2014 2:52:58 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 48111515308
+Feb 13, 2014 2:53:03 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 53118600164
+Feb 13, 2014 2:53:06 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 56122798438
+Feb 13, 2014 2:53:11 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 61137033041
+Feb 13, 2014 2:53:14 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 64142144400
+Feb 13, 2014 2:53:19 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 69148383709
+Feb 13, 2014 2:53:22 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 72152473724
+Feb 13, 2014 2:53:27 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 77162724584
+Feb 13, 2014 2:53:30 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 80166833138
+Feb 13, 2014 2:53:35 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 85172954256
+Feb 13, 2014 2:53:38 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 88178140106
+Feb 13, 2014 2:53:43 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 93191314628
+Feb 13, 2014 2:53:46 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 96196522328
+Feb 13, 2014 2:53:51 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 101199676414
+Feb 13, 2014 2:53:54 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 104202822884
+Feb 13, 2014 2:53:59 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 109206049805
+Feb 13, 2014 2:54:02 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 112209180384
+Feb 13, 2014 2:54:04 AM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 113776446957
