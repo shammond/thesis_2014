@@ -74,6 +74,31 @@ public class myTextPane extends JTextArea {
 		sMaxChar = 500;
 		cMaxChar = 500;
 	}
+	
+	public myTextPane(int session) {
+		String [] snarray = {"overprotected.txt","stopandfrisk.txt"};
+		String [] ssarray = {"philosophy.txt","lbj.txt"};
+		String [] cnarray = {};
+		String [] csarray = {};
+		String [] theend = {"end.txt"};
+		
+		simpleNormal = new TextList("simple normal", 20, snarray);
+		simpleSmall = new TextList("simple small", 7, ssarray);
+		complexNormal = new TextList("complex normal", 20, cnarray);
+		complexSmall = new TextList("complex small", 7, csarray);
+		ending = new TextList("ending", 20, theend);
+		
+		TextList [] alarray = {simpleNormal,simpleSmall,complexNormal,complexSmall,
+								complexNormal,simpleNormal,complexSmall,simpleSmall,ending};
+		allFiles = alarray;
+		
+		files = simpleNormal;
+		setIndex = 0;
+		reader = null;
+		
+		sMaxChar = 500;
+		cMaxChar = 500;
+	}
 
 	public myTextPane(StyledDocument arg0) {
 		super(arg0);

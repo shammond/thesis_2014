@@ -59,8 +59,10 @@ public class DataClassifier {
 		
 		// start with relation and define attributes
 		// state: (1,simple,standard),(2,simple,small),(3,complex,standard),(4,complex,small)
-		firstcolumn = 3;
-		numAttrs = 8;
+		//firstcolumn = 3;
+		//numAttrs = 8;
+		firstcolumn = 813;
+		numAttrs = 4;
 		
 		try {
 			arffWriter.write("@relation readingType");
@@ -69,7 +71,7 @@ public class DataClassifier {
 			writeAttributes();
 			//arffWriter.write("@attribute speed numeric");
 			//arffWriter.newLine();
-			arffWriter.write("@attribute state {1,2,3,4}");  // 4 conditions
+			arffWriter.write("@attribute state {1,2}");  // 4 conditions
 			arffWriter.newLine();
 			arffWriter.newLine();
 		} catch (IOException e) {
@@ -106,21 +108,30 @@ public class DataClassifier {
 		
 			for (String [] line : eegRows) {
 				
+				/*order: simpleNormal,simpleSmall,complexNormal,complexSmall,
+				complexSmall,complexNormal,simpleNormal,simpleSmall,
+				complexNormal,simpleNormal,complexSmall,simpleSmall,
+				simpleSmall,complexSmall,simpleNormal,complexNormal,ending*/
+				
 				if (start <= offset && offset <= start + 1600 ) {
 					// set i to be the column of the first attribute, go until have all attributes
 					
 					// add the condition as the last attribute
-					if (/*inRange(time,0,75) ||*/ inRange(time,600,675) || inRange(time,900,975) || inRange(time,1400,1475)) {
+					// simple, normal
+					if (inRange(time,0,75) || inRange(time,600,675) || inRange(time,900,975) || inRange(time,1400,1475)) {
 						writeArffLine(line,speedMap.get(time),"1");
 					}
+					// simple, small
 					else if (inRange(time,100,175) || inRange(time,700,775) || inRange(time,1100,1175) || inRange(time,1200,1275)) {
 						writeArffLine(line,speedMap.get(time),"2");
 					}
+					// complex normal
 					else if (inRange(time,200,275) || inRange(time,500,575) || inRange(time,800,875) || inRange(time,1500,1575)) {
-						writeArffLine(line,speedMap.get(time),"3");
+						writeArffLine(line,speedMap.get(time),"1");
 					}
+					// complex, small
 					else if (inRange(time,300,375) || inRange(time,400,475) || inRange(time,1000,1075) || inRange(time,1300,1375)) {
-						writeArffLine(line,speedMap.get(time),"4");
+						writeArffLine(line,speedMap.get(time),"2");
 					}
 				//	else {
 			//			arffWriter.write("0");
