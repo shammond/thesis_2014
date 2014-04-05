@@ -7,6 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.Color;
@@ -36,10 +39,16 @@ public class TextDisplaySession2 extends JFrame {
 	private myTextPane mainDisplay;
 	private Timer timer;
 	private Timer pauseTimer;
+	private Timer minuteTimer;
+	private Timer secondTimer;
 	private boolean mouseEnabled;
 	private long startTime;
 	private long lastTime;
 	private BufferedWriter clickLog;
+	ConnectionJNI eegConnect;
+	List<Double[]> eegBuffer;
+	private static CSVWriter sessionData;
+	boolean reading;
 
 	/**
 	 * @throws HeadlessException
@@ -54,12 +63,14 @@ public class TextDisplaySession2 extends JFrame {
 		if (subjectName==null)
 			System.exit(0);
 		String subjectStr = ".//logs//" + subjectName; // remember to change this for each test
+		
 
 		try {
 			logHandler = new FileHandler(subjectStr);
 			log.addHandler(logHandler);
 			logHandler.setFormatter(formatter);
 			clickLog = new BufferedWriter(new FileWriter(subjectStr + "-clicks"));
+			sessionData = new CSVWriter(new FileWriter(subjectStr + "-conditions.csv"));
 		} catch (SecurityException | IOException e) {
 			e.printStackTrace();
 			System.exit(0);
@@ -73,6 +84,14 @@ public class TextDisplaySession2 extends JFrame {
 			System.exit(0);
 		}
 		
+		setVisible(true);
+		
+		startTime = System.currentTimeMillis();
+		lastTime = startTime;
+		log.info("Program start: " + startTime);
+		timer.start();
+		minuteTimer.start();
+		secondTimer.start();
 
 	}
 	
@@ -83,10 +102,10 @@ public class TextDisplaySession2 extends JFrame {
 		getContentPane().setBackground(Color.BLACK);
 		getContentPane().setLayout(null);
 		
-		mainDisplay = new myTextPane();
+		mainDisplay = new myTextPane(2);
 		mainDisplay.setWrapStyleWord(true);
 		mainDisplay.setLineWrap(true);
-		mainDisplay.setFont(new Font("Arial", Font.PLAIN, 20));
+		mainDisplay.setFont(new Font("Arial", Font.PLAIN, 7));
 		mainDisplay.initialize();
 		mainDisplay.setEditable(false);
 		mainDisplay.setBounds(150, 12, 880, 780);
@@ -112,14 +131,10 @@ public class TextDisplaySession2 extends JFrame {
 					System.exit(0);
 				}
 				
-				// check the condition here?
-				ArrayList<Object[]> eegdata = new ArrayList<Object[]>();
-				boolean check = checkCondition(eegdata);
+
 				
 				mainDisplay.nextPage();
-				
-				if (check)
-					mainDisplay.setFont(new Font("Arial", Font.PLAIN, 20));
+
 				
 				lastTime = System.currentTimeMillis();
 				log.info("Next slide: " + mainDisplay.loggingInfo() + " "+ getTime());
@@ -160,9 +175,13 @@ public class TextDisplaySession2 extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				log.info("Condition change start pause: " + getTime());
-				mainDisplay.pause();
-				mouseEnabled = false;
+				//log.info("Condition change start pause: " + getTime());
+				//mainDisplay.pause();
+				//mouseEnabled = false;
+				
+				minuteTimer.stop();
+				secondTimer.stop();
+				eegBuffer.clear();
 				
 				pauseTimer.restart();
 				
@@ -179,16 +198,70 @@ public class TextDisplaySession2 extends JFrame {
 				mainDisplay.nextFileSet();
 				mouseEnabled = true;
 				timer.restart();
+				minuteTimer.restart();
+				secondTimer.restart();
 				pauseTimer.stop();
 			}
 			
 		};
 		
+		ActionListener minuteListener = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println("minute");
+				
+				// after 1 minute attempt to classify
+				// check the condition here?
+				//ArrayList<Object[]> eegdata = new ArrayList<Object[]>();
+				secondTimer.stop();
+				boolean check = checkCondition(eegBuffer);
+				System.out.println(check);
+			
+				if (check)
+					mainDisplay.setFont(new Font("Arial", Font.PLAIN, 20));
+			
+				eegBuffer.clear();
+				secondTimer.restart();
+			}
+			
+		};
+		
+		ActionListener secondListener = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				//System.out.println("second");
+					
+				// collect the eegdata as they read
+				//if (reading) {
+					float [] epoch = eegConnect.getClassData();
+					for (int i=0; i< (epoch.length / 13);i++) {
+						Double [] eegLine = new Double[13];
+						for (int j=0; j< 13;j++) {
+							eegLine[j] = (double)epoch[i*13+j];
+						}
+							
+						eegBuffer.add(eegLine);
+					}
+				//}
+			}
+				
+			
+		};
+		
 		// length of each reading period 75 seconds
-		timer = new Timer(75000,al);
+		timer = new Timer(60000*5,al);
 		
 		// length of a pause 25 seconds
 		pauseTimer = new Timer(25000,pl);
+		
+		// length of data acquisition 1 minute
+		minuteTimer = new Timer(10000,minuteListener);
+		
+		// length between accessing eeg data 1 second
+		secondTimer = new Timer(1000,secondListener);
+		
 
 		
 		addWindowListener( new WindowListener() {
@@ -212,6 +285,7 @@ public class TextDisplaySession2 extends JFrame {
 				pauseTimer.stop();
 				try {
 					clickLog.close();
+					sessionData.close();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -245,12 +319,21 @@ public class TextDisplaySession2 extends JFrame {
 			
 		});
 		
-		setVisible(true);
+		// set up connection to EEG
+		eegConnect = new ConnectionJNI();
+		try {
+			//new ConnectionJNI().openConnection();
+			eegConnect.openConnection("", "", true);  // ip address and port	
+		}
+		catch(UnsatisfiedLinkError e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	
 		
-		startTime = System.currentTimeMillis();
-		lastTime = startTime;
-		log.info("Program start: " + startTime);
-		timer.start();
+		eegBuffer = new ArrayList<Double[]>();
+		
+
 	}
 	
 	private long getTime() {
@@ -266,19 +349,28 @@ public class TextDisplaySession2 extends JFrame {
 		return maxVal;
 	}
 	
-	static boolean checkCondition(List<Object []> eegArray) {
+	static boolean checkCondition(List<Double []> eegArray) {
 		
 		int [] condCounts = {0,0,0,0,0,0};
 		
-		for (Object [] line : eegArray) {
+		for (Double [] line : eegArray) {
+			
+			Double [] cols = { line[2], line[3], line[4], line[5], line[6], line[7], line[8], line[9], line[10] };
 			
 			Double p = Double.NaN;
 			try {
-				p = AudreyRefClassClassifier.classify(line);  // the classifier will change for each subject
-				System.out.println(p);
+				p = AudreyRefClassClassifier.classify(cols);  // the classifier will change for each subject
+				//System.out.println(p);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
+			String [] csvdata = new String[line.length + 1];
+			for (int i=0;i<line.length;i++) {
+				csvdata[i] = String.valueOf(line[i]);
+			}
+			csvdata[line.length] = String.valueOf(p);
+			sessionData.writeNext(csvdata);
 			
 			if (p==Double.NaN) {
 				condCounts[0]++;
@@ -287,12 +379,12 @@ public class TextDisplaySession2 extends JFrame {
 				condCounts[(int)p.doubleValue()+1]++;
 			}
 			
-			for (int i = 0; i<condCounts.length; i++)
-				System.out.print(condCounts[i] + " ");
-			System.out.println();
+			//for (int i = 0; i<condCounts.length; i++)
+				//System.out.print(condCounts[i] + " ");
+			//System.out.println();
 		}
 		
-		return (condCounts[2]==maxArray(condCounts));
+		return (condCounts[4]==maxArray(condCounts));
 		
 
 	}
@@ -326,15 +418,15 @@ public class TextDisplaySession2 extends JFrame {
 	}
 	
 	public static void main(String [] args) {
-		//new TextDisplaySession2();
+		new TextDisplaySession2();
 		
-		List<Object[]> data = new ArrayList<Object[]>();
+		/*List<Double[]> data = new ArrayList<Double[]>();
 		
-		Object[] line1 = {0.0,2.3,4.5,3.4};
-		Object[] line2 = {0.0,2.3,4.5,3.4};
-		Object[] line3 = {0.0,2.3,4.5,3.4};
-		Object[] line4 = {1.0,1.0,1.0,1.0};
-		Object[] line5 = {0.0,2.3,4.5,3.4};
+		Double[] line1 = {0.0,2.3,4.5,3.4};
+		Double[] line2 = {0.0,2.3,4.5,3.4};
+		Double[] line3 = {0.0,2.3,4.5,3.4};
+		Double[] line4 = {1.0,1.0,1.0,1.0};
+		Double[] line5 = {0.0,2.3,4.5,3.4};
 		
 		data.add(line1);
 		data.add(line2);
@@ -345,6 +437,11 @@ public class TextDisplaySession2 extends JFrame {
 		
 		System.out.println(checkCondition(data));
 		
+		ConnectionJNI cj = new ConnectionJNI();
+		float [] brainData = cj.getClassData();
+		for (float item : brainData) {
+			System.out.print(item);
+		}*/
 	}
 }
 
