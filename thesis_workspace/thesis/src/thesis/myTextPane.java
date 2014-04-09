@@ -76,10 +76,21 @@ public class myTextPane extends JTextArea {
 	}
 	
 	public myTextPane(int session) {
-		String [] snarray = {"overprotected.txt","stopandfrisk.txt"};
-		String [] ssarray = {"philosophy.txt","lbj.txt"};
-		String [] cnarray = {};
-		String [] csarray = {};
+		
+		String [] qs = {"How did Brennan help get the Civil Rights Act passed?","What did the author's father say about becoming a philosophy professor?",
+						"Describe the playground.","Why is Erbil important?","What is ZunZuneo?","What is the author's issue with the #CancelColbert campaign?",
+						"Why does Menaleaus get excited?","True or False. They boys had more than one shuttlecock.","What did the report say about China?",
+						"Why did the police stop and frisk the people in the courtyard?","What happened to comic book sales after WWII?",
+						"What is Essentialism?","Name some things people are protesting.","Who is Mrs. Parker?","What did the Little Mermaid want most?",
+						"Describe the interaction between Venus and Adonis.","Describe the previous article."};
+
+		questions = qs;
+		qindex = 0;
+		
+		String [] snarray = {"overprotected.txt","peony.txt","stopandfrisk.txt","protest.txt",};
+		String [] ssarray = {"philosophy.txt","cuba.txt","captain.txt","mermaid.txt"};
+		String [] cnarray = {"lbj.txt","iliad.txt","socialclass.txt","skylight.txt"};
+		String [] csarray = {"fertilecrescent.txt", "satire.txt","stocks.txt","venus.txt"};
 		String [] theend = {"end.txt"};
 		
 		simpleNormal = new TextList("simple normal", 20, snarray);
@@ -88,11 +99,13 @@ public class myTextPane extends JTextArea {
 		complexSmall = new TextList("complex small", 7, csarray);
 		ending = new TextList("ending", 20, theend);
 		
-		TextList [] alarray = {simpleNormal,simpleSmall,complexNormal,complexSmall,
-								complexNormal,simpleNormal,complexSmall,simpleSmall,ending};
+		TextList [] alarray = {complexNormal,simpleSmall,simpleNormal,complexSmall,
+								simpleSmall,complexSmall,complexNormal,simpleNormal,
+								complexSmall,simpleNormal,simpleSmall,complexNormal,
+								simpleNormal,complexNormal,simpleSmall,complexSmall,ending};
 		allFiles = alarray;
 		
-		files = simpleNormal;
+		files = complexNormal;
 		setIndex = 0;
 		reader = null;
 		

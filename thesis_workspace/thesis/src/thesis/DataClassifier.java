@@ -59,10 +59,11 @@ public class DataClassifier {
 		
 		// start with relation and define attributes
 		// state: (1,simple,standard),(2,simple,small),(3,complex,standard),(4,complex,small)
-		//firstcolumn = 3;
-		//numAttrs = 8;
-		firstcolumn = 813;
-		numAttrs = 4;
+		firstcolumn = 3;
+		numAttrs = 8;
+		//firstcolumn = 813;
+		//numAttrs = 4;
+		//numAttrs = 90;
 		
 		try {
 			arffWriter.write("@relation readingType");
@@ -97,7 +98,16 @@ public class DataClassifier {
 		HashMap<Integer,Double> speedMap = createSpeedMap(timeReader);
 		
 		// add data to arff file
+		//firstSession(speedMap,eegRows,start);
+		secondSession(speedMap,eegRows,start);
 		
+
+		return;
+
+
+	}
+	
+	static void firstSession(HashMap<Integer,Double> speedMap,List<String[]> eegRows,int start) {
 		int time = 0;
 		
 		try {
@@ -131,7 +141,7 @@ public class DataClassifier {
 					}
 					// complex, small
 					else if (inRange(time,300,375) || inRange(time,400,475) || inRange(time,1000,1075) || inRange(time,1300,1375)) {
-						writeArffLine(line,speedMap.get(time),"2");
+						writeArffLine(line,speedMap.get(time),"1");
 					}
 				//	else {
 			//			arffWriter.write("0");
@@ -156,19 +166,102 @@ public class DataClassifier {
 		}
 		
 		return;
-
-
+		
+	}
+	
+	static void secondSession(HashMap<Integer,Double> speedMap,List<String[]> eegRows,int start) {
+		int time = 0;
+		
+		try {
+			arffWriter.write("@data");
+			arffWriter.newLine();
+			
+			int offset = -1;
+		
+			for (String [] line : eegRows) {
+				
+				/*complexNormal,simpleSmall,simpleNormal,complexSmall,
+				simpleSmall,complexSmall,complexNormal,simpleNormal,
+				complexSmall,simpleNormal,simpleSmall,complexNormal,
+				simpleNormal,complexNormal,simpleSmall,complexSmall*/
+				
+				if (start <= offset && offset <= start + 1600 ) {
+					// set i to be the column of the first attribute, go until have all attributes
+					
+					// add the condition as the last attribute
+					// simple, normal
+					if ( inRange(time,200,275) || inRange(time,700,775) || inRange(time,900,975) || inRange(time,1200,1275)) {
+						writeArffLine(line,speedMap.get(time),"1");
+					}
+					// simple, small
+					else if (inRange(time,100,175) || inRange(time,400,475) || inRange(time,1000,1075) || inRange(time,1400,1475)) {
+						writeArffLine(line,speedMap.get(time),"2");
+					}
+					// complex normal
+					else if (inRange(time,0,75) || inRange(time,600,675) || inRange(time,1100,1175) ||  inRange(time,1300,1375)) {
+						writeArffLine(line,speedMap.get(time),"1");
+					}
+					// complex, small
+					else if (inRange(time,300,375) || inRange(time,500,575) || inRange(time,800,875) || inRange(time,1500,1575)) {
+						writeArffLine(line,speedMap.get(time),"1");
+					}
+				//	else {
+			//			arffWriter.write("0");
+			//		}
+					
+					time++;
+				}
+				offset++;
+		}
+		
+		} catch (IOException e1) {
+			e1.printStackTrace();
+			System.exit(0);
+		}
+		
+		
+		try {
+			arffWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(0);
+		}
+		
+		return;
 	}
 	
 	static boolean inRange(int time,int lower,int upper) {
 		return ((lower <= time) && (time < upper));
 	}
 	
+	static void writeSection(String[] line, int start) {
+		
+		try {
+			for (int i=start;i<start+10;i++) {
+				arffWriter.write(line[i] + ",");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.exit(0);
+		}
+	}
+	
 	static void writeArffLine(String[] line, Double speed, String condition) {
 		try {
+			//brain state data
 			for (int i=firstcolumn;i<firstcolumn+numAttrs;i++) {
 				arffWriter.write(line[i] + ",");
 			}
+			
+			
+			//83,173,263,353,443,534,623,713,803
+			//int index = 83;
+			//while (index<804) {
+		//		writeSection(line,index);
+	//			index+=90;
+//			}
+				
 			// with speed
 			//arffWriter.write(Double.toString(speed) + ",");
 			arffWriter.write(condition);
@@ -331,8 +424,8 @@ public class DataClassifier {
 		
 		createArff(classification,clicks,subjectName,start);
 		
-	//	if (true)
-		//	return;
+		if (true)
+			return;
 		
 		try {
 			breader = new BufferedReader(new FileReader(".//arffFiles//" + subjectName +".arff"));

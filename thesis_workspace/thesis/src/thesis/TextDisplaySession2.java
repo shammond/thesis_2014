@@ -105,7 +105,7 @@ public class TextDisplaySession2 extends JFrame {
 		mainDisplay = new myTextPane(2);
 		mainDisplay.setWrapStyleWord(true);
 		mainDisplay.setLineWrap(true);
-		mainDisplay.setFont(new Font("Arial", Font.PLAIN, 7));
+		mainDisplay.setFont(new Font("Arial", Font.PLAIN, 20));
 		mainDisplay.initialize();
 		mainDisplay.setEditable(false);
 		mainDisplay.setBounds(150, 12, 880, 780);
@@ -175,9 +175,9 @@ public class TextDisplaySession2 extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				//log.info("Condition change start pause: " + getTime());
-				//mainDisplay.pause();
-				//mouseEnabled = false;
+				log.info("Condition change start pause: " + getTime());
+				mainDisplay.pause();
+				mouseEnabled = false;
 				
 				minuteTimer.stop();
 				secondTimer.stop();
@@ -235,14 +235,16 @@ public class TextDisplaySession2 extends JFrame {
 					
 				// collect the eegdata as they read
 				//if (reading) {
-					float [] epoch = eegConnect.getClassData();
-					for (int i=0; i< (epoch.length / 13);i++) {
-						Double [] eegLine = new Double[13];
-						for (int j=0; j< 13;j++) {
-							eegLine[j] = (double)epoch[i*13+j];
-						}
+				float [] epoch = eegConnect.getClassData();
+					if (epoch != null) {
+						for (int i=0; i< (epoch.length / 13);i++) {
+							Double [] eegLine = new Double[13];
+							for (int j=0; j< 13;j++) {
+								eegLine[j] = (double)epoch[i*13+j];
+							}
 							
-						eegBuffer.add(eegLine);
+							eegBuffer.add(eegLine);
+						}
 					}
 				//}
 			}
@@ -251,13 +253,13 @@ public class TextDisplaySession2 extends JFrame {
 		};
 		
 		// length of each reading period 75 seconds
-		timer = new Timer(60000*5,al);
+		timer = new Timer(75000,al);
 		
 		// length of a pause 25 seconds
 		pauseTimer = new Timer(25000,pl);
 		
 		// length of data acquisition 1 minute
-		minuteTimer = new Timer(10000,minuteListener);
+		minuteTimer = new Timer(60000,minuteListener);
 		
 		// length between accessing eeg data 1 second
 		secondTimer = new Timer(1000,secondListener);
@@ -281,8 +283,11 @@ public class TextDisplaySession2 extends JFrame {
 			public void windowClosing(WindowEvent arg0) {
 				// TODO Auto-generated method stub
 				log.info("Application closed: " + getTime());
+				eegConnect.closeConnection();
 				timer.stop();
 				pauseTimer.stop();
+				minuteTimer.stop();
+				secondTimer.stop();
 				try {
 					clickLog.close();
 					sessionData.close();
@@ -355,7 +360,16 @@ public class TextDisplaySession2 extends JFrame {
 		
 		for (Double [] line : eegArray) {
 			
-			Double [] cols = { line[2], line[3], line[4], line[5], line[6], line[7], line[8], line[9], line[10] };
+			/*pData[i].fClassificationEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 5;
+			pData[i].fHighEngagementEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 6;
+			pData[i].fLowEngagementEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 7;
+			pData[i].fDistractionEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 8;
+			pData[i].fDrowsyEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 9;
+			pData[i].fWorkloadFBDSEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 10;
+			pData[i].fWorkloadBDSEstimate = pFloatData + i * sizeof(_ABM_DATA_BRAIN_STATE) + 11;
+			pData[i].fWorkloadAverageEstimate = pF*/
+			
+			Double [] cols = { line[9],line[8],line[7],line[6],line[5],line[10],line[11],line[12] };
 			
 			Double p = Double.NaN;
 			try {
@@ -367,8 +381,10 @@ public class TextDisplaySession2 extends JFrame {
 			
 			String [] csvdata = new String[line.length + 1];
 			for (int i=0;i<line.length;i++) {
+				System.out.print(line[i] + ",");
 				csvdata[i] = String.valueOf(line[i]);
 			}
+			System.out.println();
 			csvdata[line.length] = String.valueOf(p);
 			sessionData.writeNext(csvdata);
 			
