@@ -1,4 +1,0 @@
-file1.txt
-=========
-A test file for transmission via the Sfile command.
-EOF

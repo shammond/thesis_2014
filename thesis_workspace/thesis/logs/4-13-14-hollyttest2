@@ -1,0 +1,18 @@
+Apr 13, 2014 11:06:25 PM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1397444785236
+Apr 13, 2014 11:07:40 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75105
+Apr 13, 2014 11:08:05 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100114
+Apr 13, 2014 11:09:20 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 175125
+Apr 13, 2014 11:09:45 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 200133
+Apr 13, 2014 11:11:00 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 275144
+Apr 13, 2014 11:11:25 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 300152
+Apr 13, 2014 11:12:40 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 375163
+Apr 13, 2014 11:12:50 PM thesis.TextDisplaySession2$6 windowClosing
+INFO: Application closed: 385117

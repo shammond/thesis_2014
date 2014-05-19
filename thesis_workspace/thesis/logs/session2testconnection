@@ -1,0 +1,56 @@
+Apr 09, 2014 1:36:02 AM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1397021762797
+Apr 09, 2014 1:36:28 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 25,46.73625175260944
+Apr 09, 2014 1:36:28 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 25682
+Apr 09, 2014 1:36:28 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 25,8193.548387096775
+Apr 09, 2014 1:36:28 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 25809
+Apr 09, 2014 1:36:29 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 26,1419.9475065616798
+Apr 09, 2014 1:36:29 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 26574
+Apr 09, 2014 1:36:30 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 27,949.874686716792
+Apr 09, 2014 1:36:30 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 27775
+Apr 09, 2014 1:36:33 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 30,364.10923276983095
+Apr 09, 2014 1:36:33 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 30856
+Apr 09, 2014 1:37:17 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75022
+Apr 09, 2014 1:37:42 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100023
+Apr 09, 2014 1:37:44 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 101,412.7475247524753
+Apr 09, 2014 1:37:44 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small philosophy.txt 101645
+Apr 09, 2014 1:38:20 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 137,26.42230717337531
+Apr 09, 2014 1:38:20 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small philosophy.txt 137232
+Apr 09, 2014 1:38:22 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 139,449.9790707408958
+Apr 09, 2014 1:38:22 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small philosophy.txt 139622
+Apr 09, 2014 1:38:57 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 175024
+Apr 09, 2014 1:39:22 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 200026
+Apr 09, 2014 1:40:37 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 275075
+Apr 09, 2014 1:41:02 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 300077
+Apr 09, 2014 1:42:17 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 375122
+Apr 09, 2014 1:42:42 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 400123
+Apr 09, 2014 1:43:57 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 475175
+Apr 09, 2014 1:44:22 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 500176
+Apr 09, 2014 1:44:58 AM thesis.TextDisplaySession2$6 windowClosing
+INFO: Application closed: 535630

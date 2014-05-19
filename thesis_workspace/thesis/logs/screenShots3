@@ -1,0 +1,10 @@
+Apr 24, 2014 12:04:39 AM thesis.TextDisplay setUp
+INFO: Program start: 1398312279529
+Apr 24, 2014 12:05:54 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 75041
+Apr 24, 2014 12:06:19 AM thesis.TextDisplay$3 actionPerformed
+INFO: Condition change end pause: 100050
+Apr 24, 2014 12:07:34 AM thesis.TextDisplay$2 actionPerformed
+INFO: Condition change start pause: 175120
+Apr 24, 2014 12:07:52 AM thesis.TextDisplay$4 windowClosing
+INFO: Application closed: 192750

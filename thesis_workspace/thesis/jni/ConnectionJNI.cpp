@@ -24,9 +24,13 @@
 
 using namespace std;
 
+//float*  __stdcall	AgetPSDBandwidthData(int& nCount, int handle);
+
 typedef long (FAR PASCAL *OPEN_FUNCTION)(char*, int&, BOOL);
 typedef long (FAR PASCAL *CLOSE_FUNCTION)(int);
 typedef float* (FAR PASCAL *GETDATA_FUNCTION)(int&, int);
+//typedef float* (FAR PASCAL *GETBAND_FUNCTION)(int&, int);
+
 
 int m_nHandle;
 string m_sIP;
@@ -51,6 +55,7 @@ JNIEXPORT jint JNICALL Java_thesis_ConnectionJNI_openConnection(JNIEnv *env, job
 	 openFunction = (OPEN_FUNCTION)GetProcAddress(datastreaming, "OpenConnection");
 	 closeFunction = (CLOSE_FUNCTION)GetProcAddress(datastreaming, "CloseConnection");
 	 getBrainState = (GETDATA_FUNCTION)GetProcAddress(datastreaming, "AgetCWPC");
+	 //getBrainState = (GETBAND_FUNCTION)GetProcAddress(datastreaming, "AgetPSDBandwidthData");
 
 	 if(openFunction == NULL || getBrainState == NULL || closeFunction == NULL)
 	     {
@@ -62,41 +67,38 @@ JNIEXPORT jint JNICALL Java_thesis_ConnectionJNI_openConnection(JNIEnv *env, job
 	//const char *nativeIP = env->GetStringUTFChars(sIPAddress, 0);
 	//m_sIP = nativeIP;
 
-	//const char *nativePort = env->GetStringUTFChars(sPort, 0);
-	//m_sIP = nativePort;
+	 //char* sConnectionString;
+	 	//sConnectionString[sIPAddress] = ' ';
+	 	//sprintf(sConnectionString, "%s %s", nativeIP, nativePort);
+	 	//cout << sConnectionString << endl;
+	 	m_nHandle = -1;
+	 	//int nConnected = 1;
+	 	BOOL btCP = 1;
 
-   	//char* sConnectionString;
-   	//sConnectionString[sIPAddress] = ' ';
-   	//sprintf(sConnectionString, "%s %s", nativeIP, nativePort);
-   	//cout << sConnectionString << endl;
-
-   	//int nConnected = 1;
-    //long nConnected = OpenConnection(sConnectionString, m_nHandle, bTCP);
-   	BOOL btCP = 1;
-  	m_nHandle = -1;
-   	char sconnect[] = "192.168.1.2 4505";
+	 	char sconnect[] = "192.168.1.2 4505";
+	 	//long nConnected = OpenConnection(sconnect, m_nHandle, btCP);
 
 
-   	// Unload the DLL
-   	//FreeLibrary(datastreaming);
 
-   	long nConnected = 12314;
+	 	// Unload the DLL
+	 	//FreeLibrary(datastreaming);
+	 	long nConnected = 123141;
+	 	try {
+	 		nConnected = (*openFunction)(sconnect, m_nHandle, btCP);
+	 	   }
+	 	catch (int ex) {
+	 		cout << "Exception " << ex << endl;
+	 	}
 
-   	//try {
-   	nConnected = (*openFunction)(sconnect, m_nHandle, btCP);
-   //	}
-   //	catch (int ex) {
-   //		cout << "Exception " << ex << endl;
-   	//}
-
-    cout << nConnected << endl;
-   	/*if(nConnected)
-   	{
-   		const char *nativeString = env->GetStringUTFChars(sIPAddress, 0);
-   		m_sIP = nativeString;
-   		//GetDeviceInfo();
-   	}*/
-
+	 	cout << nConnected << endl;
+	 	cout << "here" << endl;
+	 	   	/*if(nConnected)
+	 	   	{
+	 	   		const char *nativeString = env->GetStringUTFChars(sIPAddress, 0);
+	 	   		m_sIP = nativeString;
+	 	   		//GetDeviceInfo();
+	 	   	}
+	 	*/
 
 
    	return nConnected;
@@ -121,23 +123,25 @@ JNIEXPORT jfloatArray JNICALL Java_thesis_ConnectionJNI_getClassData(JNIEnv *env
 {
 
 	int nCount = -1;
+	int nSize = 13;
 	float* pFloatData = (*getBrainState)(nCount,m_nHandle);
 
 	if (pFloatData == NULL || nCount <= 0) {
-		cout << "it was null" << endl;
+		//cout << "it was null" << endl;
 		return NULL;
 	}
 
 	jfloatArray brainData;
-	brainData = env->NewFloatArray(nCount*13);
+	brainData = env->NewFloatArray(nCount*nSize);
+	//float brainData[nCount*13];
 
-	for (int i=0;i<nCount;i++) {
+	/*for (int i=0;i<nCount;i++) {
 		for (int j=0;j<13;j++) {
-			cout << pFloatData[j+i*13] << ",";
-			brainData[i*13+j] = pFloatData[j+i*13];
+			//cout << pFloatData[j+i*13] << ",";
+			//brainData[i*13+j] = pFloatData[j+i*13];
 		}
-		cout << endl;
-	}
+		//cout << endl;
+	}*/
 	//_ABM_DATA_BRAIN_STATE* pData = NULL;
 	// bosko: TODO: copy array to _ABM_DATA_BRAIN_STATE struct
 
@@ -178,7 +182,7 @@ JNIEXPORT jfloatArray JNICALL Java_thesis_ConnectionJNI_getClassData(JNIEnv *env
 		}
 	}*/
 
-	//env->SetFloatArrayRegion(brainData,0,26,pFloatData);
+	env->SetFloatArrayRegion(brainData,0,nCount*nSize,pFloatData);
 
 	return brainData;
 

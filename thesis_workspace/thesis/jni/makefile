@@ -23,8 +23,5 @@ ConnectionJNI.o : ConnectionJNI.cpp ConnectionJNI.h ./lib/ABM_Datastreaming.lib 
 ConnectionJNI.h : ../bin/thesis/ConnectionJNI.class
 	javah -classpath ../bin thesis.ConnectionJNI
 	
-TestConnection.o : TestConnection.cpp
-	gcc TestConnection.cpp -L./lib -lstdc++ 
-	
 clean :
 	rm thesis_ConnectionJNI.h ConnectionJNI.o connection.dll

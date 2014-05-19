@@ -1,0 +1,52 @@
+Apr 16, 2014 1:45:02 PM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1397670302525
+Apr 16, 2014 1:45:46 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 44,27.05444707473791
+Apr 16, 2014 1:45:46 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 44355
+Apr 16, 2014 1:45:48 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 45,757.0789865871833
+Apr 16, 2014 1:45:48 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 45697
+Apr 16, 2014 1:46:17 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75043
+Apr 16, 2014 1:46:42 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100051
+Apr 16, 2014 1:47:57 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 175075
+Apr 16, 2014 1:48:22 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 200083
+Apr 16, 2014 1:49:37 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 275092
+Apr 16, 2014 1:50:02 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 300099
+Apr 16, 2014 1:51:17 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 375108
+Apr 16, 2014 1:51:42 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 400116
+Apr 16, 2014 1:52:57 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 475126
+Apr 16, 2014 1:53:22 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 500134
+Apr 16, 2014 1:54:37 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 575143
+Apr 16, 2014 1:55:02 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 600151
+Apr 16, 2014 1:56:17 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 675160
+Apr 16, 2014 1:56:42 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 700168
+Apr 16, 2014 1:57:57 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 775177
+Apr 16, 2014 1:58:22 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 800184
+Apr 16, 2014 1:59:37 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 875193
+Apr 16, 2014 2:00:02 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 900201
+Apr 16, 2014 2:01:17 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 975210
+Apr 16, 2014 2:01:42 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1000218
+Apr 16, 2014 2:02:56 PM thesis.TextDisplaySession2$6 windowClosing
+INFO: Application closed: 1074072

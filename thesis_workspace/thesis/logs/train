@@ -1,0 +1,28 @@
+Apr 09, 2014 11:17:55 PM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1397099875108
+Apr 09, 2014 11:19:10 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75208
+Apr 09, 2014 11:19:35 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100229
+Apr 09, 2014 11:20:50 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 175275
+Apr 09, 2014 11:21:15 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 200296
+Apr 09, 2014 11:22:30 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 275343
+Apr 09, 2014 11:22:55 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 300364
+Apr 09, 2014 11:24:10 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 375425
+Apr 09, 2014 11:24:35 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 400437
+Apr 09, 2014 11:25:50 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 475490
+Apr 09, 2014 11:26:15 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 500503
+Apr 09, 2014 11:27:30 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 575540
+Apr 09, 2014 11:27:55 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 600553
+Apr 09, 2014 11:28:29 PM thesis.TextDisplaySession2$6 windowClosing
+INFO: Application closed: 634491

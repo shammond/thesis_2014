@@ -1,0 +1,124 @@
+The Fall of Internet Freedom: Meet the Company That Secretly Built ‘Cuban Twitter'
+By Robinson Meyer
+
+The United States discreetly supported the creation of a website and SMS service that was, basically, a Cuban version of Twitter, the Associated Press reported Thursday. ZunZuneo, as it was called, permitted Cubans to broadcast short text messages to each other. At its peak, ZunZuneo had 40,000 users.
+
+And what government agency made ZunZuneo? It wasn’t the CIA. No, it was the U.S. Agency for International Development, USAID, working with various private companies, including the D.C. for-profit contractor Creative Associates and a small, Denver-based startup, Mobile Accord.
+
+The news about ZunZuneo broke Thursday morning, around 3 a.m. Eastern time. 11 hours before, I had been in the D.C. offices of none other than Mobile Accord, talking to the company’s president about a future product release.
+
+The company’s not in the discreet social network game anymore; now it surveys countries in the developing world by SMS. On Wednesday, Mobile Accord’s president Steve Gutterman told me, “More information and more transparency is always a good thing.”
+
+The next day, I called his cell phone. He reaffirmed his company’s commitment to transparency. He said that Mobile Accord didn’t know the ZunZuneo news was coming, and he echoed the statements that USAID and the White House issued on Thursday.
+
+White House spokesman Jay Carney, meanwhile, claimed that Congress had debated and invested in ZunZuneo. “All of our work in Cuba, including this project, was reviewed in detail in 2013 by the Government Accountability Office and found to be consistent with U.S. law,” said a USAID spokesman Thursday.
+
+Senator Patrick Leahy, who as chair of the Senate Appropriations Committee oversees USAID’s budget, shunned it in the AP article. “If you're going to do a covert operation like this for a regime change, assuming it ever makes any sense, it's not something that should be done through USAID,” he said.
+
+He was more blunt on MSNBC: “It was just dumb,” he said on the network Thursday. 
+
+Was it?
+
+As I started piecing together Mobile Accord’s past on Thursday—and that of the State Department that encouraged and hired them—I found that a project like ZunZuneo wasn’t out of the ordinary at all. In 2009 and 2010, the president and the secretary of state both celebrated pro-democracy web projects like ZunZuneo. Hillary Clinton delivered multiple major policy speeches about the virtues of Internet freedom and social networks abroad.
+
+As ludicrous as the phrase ‘fake Cuban Twitter’ might sound, projects like ZunZuneo were meant to be a major focus of U.S. diplomacy. If it sounds like a risible plan, now—as it does to some commentators and, apparently, at least one Democratic senator—that only shows how much has changed since the Arab Spring was still blooming.
+
+In late October 2009, Secretary of State Hillary Clinton spent three days in Pakistan. It was not a happy visit. Clinton was grilled about the American use of drones in Pakistan’s airspace.
+
+On the second day of her trip, Clinton spoke to students in Lahore, Pakistan’s second largest city. The New York Times reported:
+
+    Rarely in her travels as secretary of state has Mrs. Clinton encountered an audience so uniformly suspicious and immune to her star power as the polite, but unsmiling, university students who challenged her at Government College University in Lahore.
+
+According to the Times, students asked her about American policy in Afghanistan, about U.S. support for the former military leader Pervez Musharraf, for more information about American weapons trafficking. Clinton’s answers did not satisfy them.
+
+But Clinton had an announcement to make of her own: The American and Pakistani governments were collaborating to launch Humari Awaz, Our Voice, “the first Pakistani mobile phone-based social network.”
+
+It seemed like a big deal. A State Department release about the new social network bragged that almost 95 million Pakistanis used mobile phones. Far more people in Pakistan, it said, had phones than had desktop computers or an Internet connection. The release announced that the U.S. would cover the costs of the first 24 million text messages sent.
+
+What it didn’t say was which company’s software Humari Awaz used. The developer, though, was happy to identify itself.
+
+“Mobile Accord is the technology backbone of the network, connecting with all five mobile phone networks,” its press release that month bragged.
+
+There wasn’t much written about Humari Awaz. It’s unclear how truly popular the social network became. By March of the next year, Humari Awaz announced that messages on the service would no longer be free, according to a Pakistani mobile tech blog, so it’s likely the inaugural 24 million American-sponsored texts had been sent.
+
+The same blog reported that Humari Awaz had encountered support issues. The service had no “website, helpline or any advertisements,” it said, and Humari Awaz’s users disliked the U.S. government’s involvement.
+
+In August 2010, the director of USAID encouraged Pakistanis to share information on the service after ruinous floods swept the country. The same announcement declared that more than 350 million messages had been sent through the social network.
+
+It’s unclear what happened after that. Humari Awaz seems to drop out of the English-language Internet record, and the State Department did not respond to our request for comment about its relationship with Mobile Accord.
+
+Humari Awaz never had a website, too, so evidence of it was scant in the first place. It is very likely, though, that a record of it might exist on a Pakistani blog—please get in touch if you are a skilled googler of Urdu.
+
+But if Humari Awaz faded away, Mobile Accord remained a friend of the State Department. In the first days of 2010, according to The New York Times Magazine, the company’s CEO, James Eberhard, and nine other technology leaders dined with Clinton and her staff. The guests included Jack Dorsey of Twitter and Eric Schmidt of Google. Writes Jesse Lichtenstein in the Times: “Toward the end of the evening, Clinton delighted those assembled by inviting them to use her ‘as an app.’”
+
+Mere days later, a tremendous earthquake struck Haiti, and Eberhard took Clinton up on her offer. According to the Times, Eberhard worked with the State Department to set up an SMS donation service in the first 12 hours after the quake. The service raised more than $40 million for the Red Cross.
+
+Later in January, Clinton gave a major address on Internet freedom at the Newseum in Washington, D.C. She spoke first of the tragedy of the earthquake. The bright point of her speech—indeed, her pivot to her point about the power of communication networks—was the enormous amount of money that Americans had donated to Haiti via Mobile Accord’s texting service.
+
+“[I]n the hours after the quake,” she said:
+
+    we worked with partners in the private sector; first, to set up the text "HAITI" campaign so that mobile phone users in the United States could donate to relief efforts via text messages. That initiative has been a showcase for the generosity of the American people, and thus far, it's raised over $25 million for recovery efforts.
+
+That partner was Mobile Accord. Months later, the chief innovation officer at USAID would speak approvingly of the company and its work in Haiti.
+
+Eberhard had some experience with mobile text donations: It was Mobile Accord’s first business. He had also long worked in mobile phones. In the early 2000s, his first company, which marketed ringtones, sold for millions.
+
+Meanwhile in early 2010, according to the Associated Press, ZunZuneo had already launched, and USAID had experimented somewhat with using it to assemble political affiliation information about Cuban cell users. 
+
+But Creative Associates, its original contractor, had “decided that ZunZuneo was so popular [that it] wasn’t sophisticated enough to build, in effect, ‘a scaled down version of Twitter.’” 
+
+So, USAID hired Mobile Accord. In July, USAID flew Eberhard to Spain to talk about a “below the radar strategy,” according to the AP. It erected shell corporations to hide ZunZuneo’s U.S. ownership.
+
+Mobile Accord, of course, had run a social network like this before. It had even run one for the U.S. government. While there isn't direct evidence, it seems likely that the software that powered Humari Awaz was similar to the software chosen by ZunZuneo.
+
+Meanwhile, Eberhard had become a favorite guest of the U.S. government. In February 2010, he spoke in the capital of the Democratic Republic of the Congo at the invitation of the U.S. Embassy there. In June 2010, he spoke at the U.S. government-backed Institute for Peace on mobile banking in Afghanistan. The next year, he spoke at the State Department’s tech conference and a State Department event in Tunisia.
+
+It’s useful to return to Clinton’s speech at the Newseum to help understand why. The U.S., she said, had a responsibility to protect freedoms of expression and access on the Internet, a 21st-century extension of America’s history of protecting speech rights abroad. She cautioned that the Internet and other “new technologies” did not inherently radiate goodness, but that they could be useful, liberating tools if shaped by benevolent American power:
+
+    On their own, new technologies do not take sides in the struggle for freedom and progress, but the United States does. We stand for a single internet where all of humanity has equal access to knowledge and ideas. And we recognize that the world's information infrastructure will become what we and others make of it. 
+
+Not only was such a strategy right for the U.S., she held, but it was smart, wise, efficient.
+
+“[P]ursuing the freedoms I've talked about today is, I believe, the right thing to do,” she said. “But I also believe it's the smart thing to do. By advancing this agenda, we align our principles, our economic goals, and our strategic priorities.”
+
+Freedom to connect as foreign policy: Not only true to the spirit of the First Amendment, but a job creator too.
+
+How would the State Department go about these goals? Clinton pledged:
+
+    We are also supporting the development of new tools that enable citizens to exercise their rights of free expression by circumventing politically motivated censorship. We are providing funds to groups around the world to make sure that those tools get to the people who need them in local languages, and with the training they need to access the internet safely.
+
+In January 2010, this was the avowed diplomatic program of the United States: to create and fund social network-like software in nations that censored their media. This was what 21st-century statecraft would look like.
+
+That was the State Department’s program in 2010, at least. By January 2011—seven months after Eberhard and Mobile Accord were brought in—USAID and its initial contractor, Creative Associates, were getting antsy. ZunZuneo seemed successful, but Mobile Accord needed to make it sustainable or independent. As the AP reporters put it:
+
+    The operation had run into an unsolvable problem. USAID was paying tens of thousands of dollars in text messaging fees to Cuba’s communist telecommunications monopoly routed through a secret bank account and front companies. It was not a situation that it could either afford or justify — and if exposed it would be embarrassing, or worse.
+
+Creative Associates gave Mobile Accord a bad evaluation. Mobile Accord suggested starting to offer advertising on ZunZuneo, but “even with projections of up to a million ZunZuneo subscribers, advertising in a state-run economy would amount to a pittance.”
+
+By March 2011, ZunZuneo had 40,000 subscribers. Mobile Accord started capping its membership, so as not to attract the attention of the Cuban government. It began looking for new leadership which could take over the ZunZuneo project.
+
+“The ZZ management team will have no knowledge of the true origin of the operation; as far as they know, the platform was established by Mobile Accord,” a company memo said, according to the AP. “There should be zero doubt in management’s mind and no insecurities or concerns about United States Government involvement.”
+
+It does not seem like Mobile Accord found a solution. According to the AP, by mid-2012, ZunZuneo began suffering service outages. It didn’t work all the time. Later that year, it went offline for good. The money had run out.
+
+In 2010 and 2011, the White House, the State Department—the entire apparatus of American diplomacy—pushed an Internet freedom agenda. American interests, they said, were advanced by the penetration of networked tech abroad.
+
+Then the U.S. government got into being a tech client and discovered it wasn’t everything it was cracked up to be. ZunZuneo’s story is that of hundreds of other startups in 2011 and 2012—ZunZuneo just happened to be supported by the U.S. government. ZunZuneo’s monetary supporters weren’t the only ones who, in 2011, discovered that they’d backed a product with no clear monetization strategy, nor were they the first to panic and look for an exit.
+
+(I also adore that ZunZuneo couldn’t run text ads because ads mean very little in a state-run economy. Surveillance-based web ads don’t work everywhere!)
+
+The story of ZunZuneo foreshadowed, too, developments that would come. Who did ZunZuneo benefit most of all, eventually? Cubacel: The Cuban government’s state-run mobile monopoly which owned the physical infrastructure through which ZunZuneo messages traveled. USAID, in trying to harass the Cuban government, wound up financially supporting it. As the world has learned in the past year, you can’t talk about freedom of expression online without talking about the integrity of the infrastructure that channels that expression. Over the past year, Americans have learned how much of our own Internet infrastructure is compromised.
+
+Mobile Accord has since moved on to a new line of products: They have an expanding business surveying people in central African and Asian nations by SMS. They also still offer their text donation service, which processes about 85 percent of donations-by-text in the U.S., according to Gutterman.
+
+Mobile Accord’s future business lies in developing huge databases of mobile phone users outside of North America and Europe. Gutterman told me they have about 120 million people in their database, and that it’s especially good in 15 nations, including Kenya, Uganda, and Pakistan. While their business depends on their close work with mobile carriers throughout the world, he said people increasingly sign up for its database by word-of-mouth—Mobile Accord will often offer airtime or free texts in exchange for survey responses.
+
+Gutterman, whom I spoke to Wednesday and Thursday, came on as president of Mobile Accord in February 2013. He professed ignorance about the ZunZuneo project, which terminated before he began. He told me that Mobile Accord no longer has any secret programs with the U.S. government, nor does the U.S. government have access to its database of developing world mobile users.
+
+Mobile Accord continues to do good business with NGOs like the World Bank, and it is expanding its business among private corporations.
+
+If ZunZuneo looks ridiculous in retrospect, it’s because 2011 is a different country. We now know U.S. security apparatus may threaten the "open Internet" as much as an oppressive government, if not more. Clinton’s speeches as secretary of state dwell on freedom of expression but not freedom from surveillance, and now—following the NSA revelations—we have a good idea why.   Beyond all this, as sociologist Zeynep Tufecki writes, it’s likely that the failure of ZunZuneo will threaten online activism abroad, even if it’s not associated with the U.S. government.
+
+If we don’t have a good idea about what social network building the U.S. should conduct abroad, it may be because we’re not sure what an Internet public is. I’m not sure, at least. Does a public Internet look like a website owned by a government, or one free from its grasps? Is it a behemoth, publicly owned social network? Given how easy-to-surveil the web seems to be, how free from government interference can a website be?  
+
+Think of it this way: If Cuban Twitter let users send messages while getting profiled by the U.S., is it any different from... uh, Twitter?

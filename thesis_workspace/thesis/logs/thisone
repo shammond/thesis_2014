@@ -1,0 +1,8 @@
+Apr 09, 2014 10:56:50 PM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1397098610531
+Apr 09, 2014 10:58:05 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75023
+Apr 09, 2014 10:58:30 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100035
+Apr 09, 2014 10:58:44 PM thesis.TextDisplaySession2$6 windowClosing
+INFO: Application closed: 113576

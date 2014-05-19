@@ -79,7 +79,7 @@ public class myTextPane extends JTextArea {
 		
 		String [] qs = {"How did Brennan help get the Civil Rights Act passed?","What did the author's father say about becoming a philosophy professor?",
 						"Describe the playground.","Why is Erbil important?","What is ZunZuneo?","What is the author's issue with the #CancelColbert campaign?",
-						"Why does Menaleaus get excited?","True or False. They boys had more than one shuttlecock.","What did the report say about China?",
+						"Why does Menaleaus get excited?","True or False. The boys had more than one shuttlecock.","What did the report say about China?",
 						"Why did the police stop and frisk the people in the courtyard?","What happened to comic book sales after WWII?",
 						"What is Essentialism?","Name some things people are protesting.","Who is Mrs. Parker?","What did the Little Mermaid want most?",
 						"Describe the interaction between Venus and Adonis.","Describe the previous article."};

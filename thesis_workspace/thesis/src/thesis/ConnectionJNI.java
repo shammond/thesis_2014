@@ -16,7 +16,7 @@ public class ConnectionJNI {
 		try {
 			ConnectionJNI connection = new ConnectionJNI();
 			m_nHandle = connection.openConnection("192.168.1.2","4505",true);
-			connection.getClassData();
+			//connection.getClassData();
 			System.out.println(m_nHandle);
 			//connection.closeConnection();
 			

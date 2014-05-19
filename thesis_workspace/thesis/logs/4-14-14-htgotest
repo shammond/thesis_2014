@@ -1,0 +1,26 @@
+Apr 14, 2014 12:35:22 AM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1397450122001
+Apr 14, 2014 12:35:30 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 8,148.31294030404152
+Apr 14, 2014 12:35:30 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 8091
+Apr 14, 2014 12:36:37 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75036
+Apr 14, 2014 12:37:02 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100044
+Apr 14, 2014 12:38:17 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 175054
+Apr 14, 2014 12:38:42 AM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 200062
+Apr 14, 2014 12:39:08 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 226,58.2600561272217
+Apr 14, 2014 12:39:08 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal overprotected.txt 226787
+Apr 14, 2014 12:39:14 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 232,180.82788671023965
+Apr 14, 2014 12:39:14 AM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal overprotected.txt 232295
+Apr 14, 2014 12:39:57 AM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 275073
+Apr 14, 2014 12:40:17 AM thesis.TextDisplaySession2$6 windowClosing
+INFO: Application closed: 295651

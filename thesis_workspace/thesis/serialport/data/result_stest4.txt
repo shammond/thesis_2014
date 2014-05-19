@@ -1,25 +1,0 @@
-Processing script data/stest4.txt
-  1: # stest 4 - Line speed change identity test.
-  2: # =======
-  3: #
-  4: 
-  5: sp_create localhost 16001 # Start a session with spd
-     Created: localhost:16001
-  6: sp_open ttyS0             # Open a line to sptarget
-  7: 
-  8: sp_echo M 100 500         # Ask sptarget to echo its state
-     Return string: [Unset] (6 bytes)
-  9: sp_put L9600,8,N,1;       # Tell sptarget to set the line to its normal state
- 10: pause 3000                # the L command is currently very slow
- 11: sp_setport 9600 8 N 1     # Now set this end to the same state
- 12: sp_echo M 100 500         # Ask sptarget to echo its state
-     Return string: [Baud=9600  Databits=8  Parity=N  Stopbits=1] (44 bytes)
- 13: 
- 14: sp_close FALSE            # Release the line
- 15: sp_delete                 # End the session
- 16: 
- 17: #
- 18: # End of test: no errors expected
- 19: #
-Script ended: 0 errors
-

@@ -1,6 +1,0 @@
-spttest2.txt
-============
-wait=1000ms pause=100ms
-W1000;P100;Sdata/file1.txt;D14;Discarded textA20;The little green manT
-E12;...from Mars
-E7;The endQ

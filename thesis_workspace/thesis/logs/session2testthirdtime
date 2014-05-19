@@ -1,0 +1,220 @@
+Apr 07, 2014 9:12:31 PM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1396919551316
+Apr 07, 2014 9:13:09 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 38,31.314422901281283
+Apr 07, 2014 9:13:09 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 38325
+Apr 07, 2014 9:13:46 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 75021
+Apr 07, 2014 9:14:11 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 100025
+Apr 07, 2014 9:14:29 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 118,36.54594268807189
+Apr 07, 2014 9:14:29 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small philosophy.txt 118282
+Apr 07, 2014 9:15:05 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 154,26.033733071149637
+Apr 07, 2014 9:15:05 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small philosophy.txt 154392
+Apr 07, 2014 9:15:26 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 175036
+Apr 07, 2014 9:15:51 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 200039
+Apr 07, 2014 9:16:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 241,37.25415131358568
+Apr 07, 2014 9:16:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal overprotected.txt 241836
+Apr 07, 2014 9:17:06 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 275050
+Apr 07, 2014 9:17:31 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 300053
+Apr 07, 2014 9:17:53 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 322,24.760632375862837
+Apr 07, 2014 9:17:53 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small fertilecrescent.txt 322510
+Apr 07, 2014 9:18:23 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 352,26.47344288630811
+Apr 07, 2014 9:18:23 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small fertilecrescent.txt 352392
+Apr 07, 2014 9:18:46 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 375109
+Apr 07, 2014 9:19:11 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 400112
+Apr 07, 2014 9:19:38 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 427,24.817412157988446
+Apr 07, 2014 9:19:38 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small cuba.txt 427635
+Apr 07, 2014 9:20:01 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 450,31.579407776757208
+Apr 07, 2014 9:20:01 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small cuba.txt 450499
+Apr 07, 2014 9:20:26 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 474,24.894046002551125
+Apr 07, 2014 9:20:26 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small cuba.txt 474804
+Apr 07, 2014 9:20:26 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 475157
+Apr 07, 2014 9:20:51 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 500160
+Apr 07, 2014 9:21:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 542,26.479676729260756
+Apr 07, 2014 9:21:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small satire.txt 542231
+Apr 07, 2014 9:22:00 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 569,21.247079439252335
+Apr 07, 2014 9:22:00 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small satire.txt 569625
+Apr 07, 2014 9:22:06 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 575217
+Apr 07, 2014 9:22:31 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 600220
+Apr 07, 2014 9:22:57 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 626,25.775149723296188
+Apr 07, 2014 9:22:57 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal iliad.txt 626603
+Apr 07, 2014 9:23:20 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 648,30.73243377408728
+Apr 07, 2014 9:23:20 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal iliad.txt 648765
+Apr 07, 2014 9:23:46 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 675229
+Apr 07, 2014 9:24:11 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 700232
+Apr 07, 2014 9:24:37 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 726,24.31168034358463
+Apr 07, 2014 9:24:37 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal peony.txt 726311
+Apr 07, 2014 9:25:00 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 748,34.01210300808339
+Apr 07, 2014 9:25:00 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal peony.txt 748951
+Apr 07, 2014 9:25:26 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 775237
+Apr 07, 2014 9:25:51 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 800238
+Apr 07, 2014 9:26:11 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 820,29.058014958560744
+Apr 07, 2014 9:26:11 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small stocks.txt 820027
+Apr 07, 2014 9:26:34 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 842,27.726675427069644
+Apr 07, 2014 9:26:34 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small stocks.txt 842859
+Apr 07, 2014 9:27:05 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 873,31.028483051939684
+Apr 07, 2014 9:27:05 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small stocks.txt 873896
+Apr 07, 2014 9:27:06 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 875269
+Apr 07, 2014 9:27:31 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 900270
+Apr 07, 2014 9:28:00 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 928,28.311108008098863
+Apr 07, 2014 9:28:00 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal stopandfrisk.txt 928917
+Apr 07, 2014 9:28:15 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 944,41.65054803352675
+Apr 07, 2014 9:28:15 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal stopandfrisk.txt 944428
+Apr 07, 2014 9:28:39 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 967,34.06822140096003
+Apr 07, 2014 9:28:39 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal stopandfrisk.txt 967971
+Apr 07, 2014 9:28:46 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 975320
+Apr 07, 2014 9:29:11 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1000321
+Apr 07, 2014 9:29:38 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1026,26.707580406864416
+Apr 07, 2014 9:29:38 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small captain.txt 1026719
+Apr 07, 2014 9:30:07 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1056,24.478262349777005
+Apr 07, 2014 9:30:07 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small captain.txt 1056093
+Apr 07, 2014 9:30:26 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 1075368
+Apr 07, 2014 9:30:51 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1100369
+Apr 07, 2014 9:31:11 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1120,31.7564829821718
+Apr 07, 2014 9:31:11 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal socialclass.txt 1120115
+Apr 07, 2014 9:31:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1141,29.928610653487095
+Apr 07, 2014 9:31:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal socialclass.txt 1141968
+Apr 07, 2014 9:31:53 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1161,26.31578947368421
+Apr 07, 2014 9:31:53 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal socialclass.txt 1161767
+Apr 07, 2014 9:32:06 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 1175458
+Apr 07, 2014 9:32:31 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1200459
+Apr 07, 2014 9:32:51 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1219,27.772073921971252
+Apr 07, 2014 9:32:51 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal protest.txt 1219940
+Apr 07, 2014 9:33:22 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1251,24.887239691628547
+Apr 07, 2014 9:33:22 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal protest.txt 1251202
+Apr 07, 2014 9:33:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1262,48.217839696037636
+Apr 07, 2014 9:33:33 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple normal protest.txt 1262258
+Apr 07, 2014 9:33:46 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 1275472
+Apr 07, 2014 9:34:11 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1300473
+Apr 07, 2014 9:34:28 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1316,33.878787878787875
+Apr 07, 2014 9:34:28 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal skylight.txt 1316974
+Apr 07, 2014 9:35:01 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1350,24.756772938182905
+Apr 07, 2014 9:35:01 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal skylight.txt 1350380
+Apr 07, 2014 9:35:15 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1364,41.62158263002236
+Apr 07, 2014 9:35:15 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal skylight.txt 1364244
+Apr 07, 2014 9:35:26 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 1375473
+Apr 07, 2014 9:35:51 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1400474
+Apr 07, 2014 9:36:14 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1423,31.406542666724746
+Apr 07, 2014 9:36:14 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small mermaid.txt 1423433
+Apr 07, 2014 9:36:30 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1439,32.371120881921875
+Apr 07, 2014 9:36:30 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small mermaid.txt 1439127
+Apr 07, 2014 9:36:45 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1454,35.19586398886459
+Apr 07, 2014 9:36:45 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: simple small mermaid.txt 1454215
+Apr 07, 2014 9:37:06 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 1475475
+Apr 07, 2014 9:37:31 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1500476
+Apr 07, 2014 9:37:50 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1518,29.292375205704882
+Apr 07, 2014 9:37:50 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small venus.txt 1518708
+Apr 07, 2014 9:38:10 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1539,26.779145617735054
+Apr 07, 2014 9:38:10 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small venus.txt 1539098
+Apr 07, 2014 9:38:32 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 1561,23.426461875028487
+Apr 07, 2014 9:38:32 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex small venus.txt 1561041
+Apr 07, 2014 9:38:46 PM thesis.TextDisplaySession2$2 actionPerformed
+INFO: Condition change start pause: 1575477
+Apr 07, 2014 9:39:11 PM thesis.TextDisplaySession2$3 actionPerformed
+INFO: Condition change end pause: 1600478
+Apr 07, 2014 9:39:20 PM thesis.TextDisplaySession2$4 windowClosing
+INFO: Application closed: 1608909

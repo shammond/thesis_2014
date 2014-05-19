@@ -1,0 +1,12 @@
+Apr 07, 2014 9:09:23 PM thesis.TextDisplaySession2 <init>
+INFO: Program start: 1396919363003
+Apr 07, 2014 9:10:02 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 39,30.22289384208538
+Apr 07, 2014 9:10:02 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 39711
+Apr 07, 2014 9:10:36 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Chars per second: 73,29.9625468164794
+Apr 07, 2014 9:10:36 PM thesis.TextDisplaySession2$1 mouseClicked
+INFO: Next slide: complex normal lbj.txt 73623
+Apr 07, 2014 9:10:50 PM thesis.TextDisplaySession2$4 windowClosing
+INFO: Application closed: 87739

@@ -1,5 +1,0 @@
-spttest1.txt
-============
-W000;P0000;Sdata/file1.txt;D14;Discarded textA20;The little green manT
-E12;...from Mars
-E7;The endQ
